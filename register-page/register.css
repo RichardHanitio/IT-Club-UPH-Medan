@@ -1,65 +1,81 @@
 @import "../styles.css";
 
 body{
-    background-image : url(../images/itclub1.jpg);
+    background : url(../images/itclub1.jpg);
     background-size : 100%;
-    background-repeat : no-repeat;
-    width : 100vw;
+    background-repeat : repeat-y;
     height : 100vh;
+    width : 100vw;
 }
 
 .outer-container{
-    display : flex;
     background-color : rgba(36, 115, 181, .5);
-    height : 100%;
-    width : 100%;
+    display : flex;
     align-items : center;
+    width : 100%;
+    height : 100%;
     justify-content : center;
 }
 
 .inner-container{
     display : flex;
-    width : 40%;
-    height : 85%;
+    min-width : 40%;
+    max-height : 90%;
     background-color : white;
     border-radius : .3rem;
     flex-direction : column;
     padding : 0 4% 0;
     box-shadow : var(--events-box-shadow);
+    overflow : auto;
 }
 
 .field {
     font-weight : 500;
     font-size : var(--default-font-size);
     margin-bottom : 2%;
-    margin-top : 6%;
+    margin-top : 3%;
 }
 
 .field input {
-    width : 100%;
-    height : 60%;
+    min-width : 100%;
+    min-height : 60%;
     margin-top : 2%;
     border-radius : .2rem;
     outline : none;
     border : 1px solid black;
-    padding : 1% 3%;
+    padding : 2% 3%;
+    font-size : calc(var(--default-font-size) - .15rem);
 }
 
 .title{
     align-self : center;
     margin-top : 5%;
+    margin-bottom : 2%;
+}
+
+.btn{
+    border : none;
+    background : none;
+    font-size : calc(var(--default-font-size) - .1rem);
+    color : white;
+    border-radius : var(--btn-radius);
+    cursor : pointer;
 }
 
 .next-btn {
-    color : white;
-    border : none;
     border-radius : var(--btn-radius);
-    padding : 1% 2%;
+    padding : 1.5%;
     background : var(--clr-btn-primary);
     align-self : flex-end;
-    cursor : pointer;
-    margin-top : 9%;
+    margin-top : 6%;
     width : 20%;
-    height : 6%;
+    margin-bottom : 5%;
 }
 
+.next-btn:hover{
+    box-shadow : var(--btn-box-shadow);
+}
+
+input:focus {
+    border : 1px solid var(--clr-primary-1);
+}
