@@ -1,0 +1,73 @@
+@import "../styles.css";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+}
+
+header .left{
+    height: 100%;
+}
+
+header img{
+    height: 100%;
+}
+
+ul{
+    display: flex;
+    width: auto;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.navbar-menu{
+    font-size: var(--default-font-size);
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    border-color: transparent;
+    margin: 0 1rem 0 0;
+    font-size: var(--default-font-size);
+    border-radius: var(--btn-radius);
+    padding: 1rem 1.5rem;
+}
+
+.register{
+    background-image: var(--clr-btn-primary);
+    color: white;
+}
+
+.login{
+    background-color: white;
+    color: var(--clr-primary-1);
+    border-color: var(--clr-primary-1);
+    border: solid 1px;
+}
+
+.actived{
+    color: var(--clr-primary-1);
+}
