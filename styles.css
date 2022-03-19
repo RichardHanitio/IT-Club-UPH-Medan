@@ -4,7 +4,7 @@
 :root{
     /* font & text */
     --font-family : "Montserrat", sans-serif;
-    --default-font-size : 1rem;
+    --default-font-size : .9rem;
     --header-1-font-size : 2.25rem;
     --header-2-font-size : 1.9rem;
     --line-spacing : 1.6;
@@ -20,7 +20,7 @@
 
     /* events */
     --clr-events : linear-gradient(to bottom, #0B2236, #1A4C76, #2473B5);
-    --events-box-shadow : 4px 3px 6px rgb(0, 0, 0, 25%);
+    --events-box-shadow : 6px 5px 6px rgb(0, 0, 0, 25%);
 
     /* community */
     --clr-community : linear-gradient(to bottom, #92B9DA, #FFFFFF);
