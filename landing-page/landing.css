@@ -1,5 +1,5 @@
-@import "../styles.css";
-@import "../header-page/header.css";
+@import "/styles.css";
+@import "/header/header.css";
 
 *{
     box-sizing: border-box;
