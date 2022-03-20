@@ -1,3 +1,4 @@
+// append header to our html
 fetch("/header/header.html")
     .then(res => res.text())
     .then(data => {
@@ -5,5 +6,4 @@ fetch("/header/header.html")
         newHeader.setAttribute("class", "header");
         newHeader.innerHTML = data;
         document.body.append(newHeader);
-        console.log(data);
     })
