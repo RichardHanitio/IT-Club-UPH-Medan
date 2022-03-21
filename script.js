@@ -1,9 +1,10 @@
 // append header to our html
-fetch("/header/header.html")
-    .then(res => res.text())
-    .then(data => {
-        const newHeader = document.createElement("header");
-        newHeader.setAttribute("class", "header");
-        newHeader.innerHTML = data;
-        document.body.append(newHeader);
-    })
+
+window.onload = function appendHeader() {
+    const header = document.querySelector("header")
+    fetch("/header/header.html")
+        .then(res => res.text())
+        .then(data => {
+            header.innerHTML = data;
+        })
+}

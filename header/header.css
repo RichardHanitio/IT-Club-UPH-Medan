@@ -71,7 +71,7 @@ button{
 }
 
 .register:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s;
 }
 
@@ -83,7 +83,7 @@ button{
 }
 
 .login:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s;
 }
 
