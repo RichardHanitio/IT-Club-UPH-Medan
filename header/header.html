@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/header/header.css">
+    <link rel="stylesheet" href="header.css">
     <title>Header</title>
 </head>
 <body>
@@ -13,19 +13,22 @@
     <div class="header-nav">
         <!-- Logo -->
         <div class="left">
-            <img src="../images/itclublogo.png" alt="" class="fit">
+            <a href="/landing-page/landing.html">
+                <img src="../images/itclublogo.png" alt="" class="fit">
+            </a>
+            
         </div>
 
         <!-- Navbar menu -->
         <ul class="middle">
-            <li class="navbar-menu actived"><a href="../home-page/home.html">HOME</a></li>
+            <li class="navbar-menu actived"><a href="../landing-page/landing.html">HOME</a></li>
             <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
             <li class="navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
         </ul>
 
         <!-- Regis and login button -->
         <ul class="right">
-            <li><button class="register">Register</button></li>
+            <li><button class="register" onclick="location.href='/register-page/register.html'">Register</button></li>
             <li><button class="login">Log in</button></li>
         </ul>
     </div>
