@@ -1,13 +1,155 @@
 @import "/styles.css";
 
+main{
+    background-color : var(--clr-neutral-1);
+    width : 100%;
+    height : 100%;
+}
+
 .banner{
     width : 100%;
-    height : 70vh;
+    height : 65vh;
     background-image : url("/images/itclub2.jpg");
     background-size : cover;
+    background-position : center;
+    position : relative;
 }
 
 .blue-background{
-    background-color : rgb(36, 115, 181);
+    background-color: rgba(36, 115, 181, .5);
+    width : 100%;
+    height : 100%;
+}
+
+.banner-caption {
     position : absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align : center;
+    color : white;
+}
+
+.banner-caption div:first-child{
+    font-weight : 700;
+    font-size : var(--header-1-font-size);
+    margin-bottom : 5%;
+}
+
+.banner-caption div:last-child{
+    line-height : var(--line-spacing);
+    font-size : var(--default-font-size);
+}
+
+.main-grid{
+    width : 90%;
+    margin : 0 auto;
+    padding : 5% 0;
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.title{
+    color : var(--clr-primary-1);
+    margin-bottom : 2%;
+}
+
+.img{
+    width : 80%;
+}
+
+.desc{
+    font-size : var(--default-font-size);
+    line-height : var(--line-spacing);
+
+}
+
+.vision-mission{
+    background-image : radial-gradient(circle at top, var(--clr-primary-2) 40%, var(--clr-primary-1));
+    color : white;
+    height : 45vh;
+    font-size : var(--default-font-size);
+    margin-top : 2%;
+}
+
+.outer-div{
+    display : flex;
+    align-items : center;
+    margin : 0 auto;
+    width : 90%;
+    height : 100%;
+    justify-content : space-around;
+}
+
+.mission, .vision{
+    text-align : center;
+    padding : 0 10%;
+}
+
+.mission h2,
+.vision h2{
+    margin-bottom : 5%;
+}
+
+.mission div,
+.vision div{
+    margin-bottom : 5%;
+    line-height : var(--line-spacing);
+}
+
+
+.what-is-our-goal {
+    text-align : right;
+    align-self : center;
+}
+
+.img-1{
+    justify-self : end;
+}
+
+.images{
+    /* background-color: pink; */
+    position : relative;
+    top : -50%;
+}
+
+.img-2, .img-3{
+    width : 50%;
+}
+
+.img-3{
+    position : absolute;
+    left : 30%;
+    top : 70%;
+}
+
+.logo{
+    width : 15%;
+}
+
+.logos{
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+}
+
+.logo-uph{
+    width : 20%;
+}
+
+.partners{
+    text-align: center;
+    padding : 5% 0;
+}
+
+footer{
+    background-color : var(--clr-primary-1);
+    padding : .5%;
+}
+
+footer div{
+    color : white;
+    text-align: center;
+    font-size : calc(var(--default-font-size) - .1rem);
 }
