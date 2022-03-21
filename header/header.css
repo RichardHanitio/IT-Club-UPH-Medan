@@ -56,8 +56,6 @@ li{
 button{
     display: flex;
     align-items: center;
-    height: 40%;
-    width: 100%;
     border: none;
     margin: 0 1rem 0 0;
     font-size: calc(var(--default-font-size) - .15rem);
@@ -65,28 +63,44 @@ button{
     padding: .5rem 1rem;
 }
 
-.register{
+.primary-btn{
     background-image: var(--clr-btn-primary);
     color: white;
+    
 }
 
-.register:hover{
+.primary-btn:hover{
     transform: scale(1.2);
     transition: 0.5s;
 }
 
-.login{
+.secondary-btn{
     background-color: white;
     color: var(--clr-primary-1);
     border-color: var(--clr-primary-1);
     border: solid 1px;
 }
 
-.login:hover{
+.secondary-btn:hover{
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .actived{
     color: var(--clr-primary-1);
+}
+
+/* Layar Mobile */
+@media (max-width: 578px) {
+    .header-nav{
+        background-color: skyblue;
+    }
+
+    .middle{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
 }
