@@ -8,3 +8,6 @@ window.addEventListener("load", function appendHeader() {
             header.innerHTML = data;
         })
 })
+
+//Header Mobile
+

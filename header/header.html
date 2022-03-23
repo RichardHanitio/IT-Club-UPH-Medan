@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="header-nav">
     <!-- Logo -->
     <div class="left">
@@ -19,3 +20,69 @@
         <li><button class="secondary-btn">Log in</button></li>
     </ul>
 </div>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="/header/header.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+</head>
+<body>
+    <!-- Header container -->
+    <div class="header-nav">
+        <!-- Logo -->
+        <div class="left">
+            <a href="/landing-page/landing.html">
+                <img src="/images/itclublogo.png" alt="" class="fit">
+            </a>
+        </div>
+
+        <div class="second-part">
+            <input type="checkbox" id="check" onclick="isChecked()">
+            <label for="check">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <div class="list-down-container" id="list-down">
+                <ul class="middle">
+                    <li class="navbar-menu actived"><a href="../landing-page/landing.html">HOME</a></li>
+                    <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
+                    <li class="navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
+                </ul>
+        
+                <!-- Regis and login button -->
+                <ul class="right">
+                    <li><button class="primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
+                    <li><button class="secondary-btn">Log in</button></li>
+                </ul>
+            </div>
+            <!-- Navbar menu -->
+            
+        </div>
+        
+        
+    </div>
+
+    <script>
+        var headerMobile = document.querySelector('.list-down-container')
+
+        function isChecked(){
+            if(document.getElementById("check").checked){
+                headerMobile.style.transform = "translateX(0)"
+            }
+            else{
+                headerMobile.style.transform = "translateX(100%)"
+            }
+        }
+    </script>
+
+</body>
+</html>
+>>>>>>> Stashed changes
