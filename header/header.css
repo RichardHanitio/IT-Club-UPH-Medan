@@ -23,12 +23,19 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 100vw;
     height: 10vh;
     top: 0;
     right: 0;
     left: 0;
     background-color : blue;
+=======
+    width: 100%;
+    height: 4rem;
+    position : fixed;
+    background-color : white;
+>>>>>>> parent of 78dbad2 (new commit)
     z-index : 1;
     min-width: 675px;
 }
