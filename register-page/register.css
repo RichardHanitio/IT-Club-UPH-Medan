@@ -51,6 +51,7 @@ body{
     align-self : center;
     margin-top : 5%;
     margin-bottom : 2%;
+    font-size : var(--header-3-font-size);
 }
 
 .btn{

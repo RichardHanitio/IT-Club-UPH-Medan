@@ -12,7 +12,7 @@ a{
 }
 
 a:hover{
-    color: var(--clr-primary-1);
+    color: var(--clr-primary-2);
 }
 
 
@@ -69,28 +69,33 @@ button{
 .primary-btn{
     background-image: var(--clr-btn-primary);
     color: white;
-    
+    box-shadow : var(--btn-box-shadow);
+    transition: 0.3s;
+    /* background-blend-mode : lighten; */
 }
 
 .primary-btn:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
+    /* transform: scale(1.2); */
+    filter : brightness(70%);
 }
 
 .secondary-btn{
     background-color: white;
-    color: var(--clr-primary-1);
-    border-color: var(--clr-primary-1);
+    color: var(--clr-primary-2);
+    border-color: var(--clr-primary-2);
     border: solid 1px;
+    transition: 0.3s;
 }
 
 .secondary-btn:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
+    /* transform: scale(1.2); */
+    background-image: var(--clr-btn-primary);
+    color: white;
+    filter : brightness(70%);
 }
 
 .actived{
-    color: var(--clr-primary-1);
+    color: var(--clr-primary-2);
 }
 
 /* Layar Mobile */

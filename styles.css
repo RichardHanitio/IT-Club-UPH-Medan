@@ -4,9 +4,10 @@
 :root{
     /* font & text */
     --font-family : "Montserrat", sans-serif;
-    --default-font-size : .9rem;
-    --header-1-font-size : 2.25rem;
-    --header-2-font-size : 1.9rem;
+    --default-font-size : 1rem;
+    --header-1-font-size : 2.8rem;
+    --header-2-font-size : 2.3rem;
+    --header-3-font-size : 1.8rem;
     --line-spacing : 1.6;
 
     /* color */
@@ -17,7 +18,7 @@
     /* buttons */
     --clr-btn-primary : linear-gradient(to right, var(--clr-primary-1), var(--clr-primary-2));
     --btn-radius : .5rem;
-    --btn-box-shadow : 0 2px 2px rgb(0, 0, 0, 25%);
+    --btn-box-shadow : 0 3px 4px rgba(57, 167, 174, .3);
 
     /* events */
     --clr-events : linear-gradient(to bottom, #0B2236, #1A4C76, #2473B5);
