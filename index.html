@@ -4,12 +4,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website of IT Club UPH Medan">
-    <link rel="icon" type="image/png" href="images/logo-without-name.png">
     <link rel="stylesheet" href="styles.css">
-    <title>IT Club | Home Page</title>
+    <link rel="icon" type="image/png" href="/images/logo-without-name.png">
+    <script src="https://kit.fontawesome.com/b3bdc1a0ed.js" crossorigin="anonymous"></script>
+    <title>IT Club</title>
 </head>
 <body>
-    <div>tes</div>
+    <div class="header-nav">
+        <!-- Logo -->
+        <div class="left">
+            <a href="/landing-page/landing.html">
+                <img src="/images/itclublogo.png" alt="" class="fit">
+            </a>
+        </div>
+
+        <div class="second-part">
+            <input type="checkbox" id="check" onclick="isChecked()">
+            <label for="check">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <div class="list-down-container" id="list-down">
+                <ul class="middle">
+                    <li class="navbar-menu actived"><a href="../landing-page/landing.html">HOME</a></li>
+                    <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
+                    <li class="navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
+                </ul>
+        
+                <!-- Regis and login button -->
+                <ul class="right">
+                    <li><button class="primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
+                    <li><button class="secondary-btn">Log in</button></li>
+                </ul>
+            </div>
+            <!-- Navbar menu -->
+            
+        </div>
+        
+        
+    </div>
+
+    <script>
+        var headerMobile = document.querySelector('.list-down-container')
+
+        function isChecked(){
+            if(document.getElementById("check").checked){
+                headerMobile.style.transform = "translateX(0)"
+            }
+            else{
+                headerMobile.style.transform = "translateX(100%)"
+            }
+        }
+    </script>
+
+    <main>
+        <div class="content-container-1">
+            <div class="first-content">
+                <div class="first-content-left">
+                    <img src="../images/itclublogo.png" alt="">
+                </div>
+                <div class="first-content-right">
+                    <h1>Welcome</h1>
+                    <h1>To IT Club</h1>
+                    <h1>Website</h1>
+    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
+    
+                    <button onclick="" class="primary-btn">Check Out Our Event</button>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="content-container-2">
+            <h2 class="second-content">
+                <div class="title">
+                    Events
+                </div>
+
+                <div class="event-container">
+                    <i class="fa-solid fa-user"></i>
+
+                    <a class="event" href="">
+                        <div class="poster">
+                            <img src="/images/BCC_Poster2-02.png" alt="">
+                        </div>
+                        <div class="poster-title">Basic Coding Class</div>
+                    </a>
+
+                    <a class="event" href="">
+                        <div class="poster">
+                            <img src="/images/BCC_Poster2-02.png" alt="">
+                        </div>
+                        <div class="poster-title">Basic Coding Class</div>
+                    </a>
+
+                    <a class="event" href="">
+                        <div class="poster">
+                            <img src="/images/BCC_Poster2-02.png" alt="">
+                        </div>
+                        <div class="poster-title">Basic Coding Class</div>
+                    </a>
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+            </h2>
+        </div>
+
+        <div class="content-container-3">
+            <div class="third-content">
+                <div class="third-content-left">
+                    <h1>Hi,</h1>
+                    <h1>Welcome to our</h1>
+                    <h1>Community!</h1>
+    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
+
+                    <button onclick="" class="secondary-btn">Learn More About Us</button>
+                </div>
+
+                <div class="third-content-right">
+                    <img src="/images/Community.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-4">
+            <div class="fourth-content">
+                <div class="fourth-content-left">
+                    <img src="/images/itclublogo.png" alt="">
+                </div>
+
+                <div class="fourth-content-right">
+                    <div class="contact-title-desc">
+                        <div class="title">
+                            Contact Us
+                        </div>
+                        <p>
+                            Have any questions or feedback? We'd like to hear from you
+                        </p>
+                    </div>
+
+                    <form action="">
+                        <label class="field">
+                            <div>Full Name</div>
+                            <input type="text" name="full-name" placeholder="Enter Your Full Name">
+                        </label>
+
+                        <label class="field">
+                            <div>Email</div>
+                            <input type="text" name="email" placeholder="Enter Your Email">
+                        </label>
+
+                        <label class="field-message">
+                            <div>Message</div>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                        </label>
+
+                        <button type="submit" class="primary-btn">submit</button>
+                    </form>
+
+                    <div class="media-social">
+                        <p>or contact us via</p>
+
+                        <div class="sosmed">
+                            <a href=""><i class="fas fa-bar"></i></a>
+                            <a href=""><i class="fa fa-bar"></i></a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Created by Richard Hanitio & Ricky, coordinators of IT Club 2021/2022 
+        </footer>
+    </main>
 </body>
 </html>
