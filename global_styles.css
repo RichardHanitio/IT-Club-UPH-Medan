@@ -11,12 +11,12 @@
     --line-spacing : 1.6;
 
     /* color */
-    --clr-primary-1 : #2473B5;
-    --clr-primary-2 : #39A7AE;
-    --clr-neutral-1 : rgba(36, 115, 181,6%);
+    --clr-primary : #2473B5;
+    --clr-secondary : #39A7AE;
+    --clr-neutral : rgba(36, 115, 181,6%);
 
     /* buttons */
-    --clr-btn-primary : linear-gradient(to right, var(--clr-primary-1), var(--clr-primary-2));
+    --clr-btn-primary : linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
     --btn-radius : .5rem;
     --btn-box-shadow : 0 3px 4px rgba(57, 167, 174, .3);
 
@@ -36,4 +36,39 @@
     margin : 0;
     padding : 0;
     font-family : var(--font-family);
+    list-style-type: none;
 }
+
+/* buttons */
+.btn{
+    cursor : pointer;
+}
+
+.primary-btn{
+    background-image: var(--clr-btn-primary);
+    color: white;
+    box-shadow : var(--btn-box-shadow);
+    transition: 0.3s;
+}
+.primary-btn:hover{
+    filter : brightness(70%);
+}
+
+.secondary-btn{
+    background : none;
+    color: var(--clr-secondary);
+    border : 1px solid var(--secondary-btn);
+    transition: 0.3s;
+}
+.secondary-btn:hover{
+    background-image: var(--clr-btn-primary);
+    color: white;
+    filter : brightness(70%);
+}
+
+.active-page{
+    color : var(--clr-secondary);
+}
+
+
+/* header's CSS */

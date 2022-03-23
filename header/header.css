@@ -1,55 +1,45 @@
-@import "/styles.css";
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    list-style-type: none;
-}
-
-.header-nav a{
-    text-decoration: none;
-    color: black;
-}
-
-.header-nav a:hover{
-    color: var(--clr-primary-2);
-}
-
-.header-nav button:hover{
-    cursor: pointer;
-}
+@import "/global_styles.css";
 
 .header-nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-    width: 100vw;
-    height: 10vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color : blue;
-=======
     width: 100%;
     height: 4rem;
     position : fixed;
     background-color : white;
->>>>>>> parent of 78dbad2 (new commit)
     z-index : 1;
     min-width: 675px;
 }
 
-.header-nav .left{
+
+
+
+/* header-left */
+
+.header-left{
     height: 100%;
     width: 50%;
 }
 
-.header-nav img{
+.header-left a{
+    text-decoration: none;
+    color: black;
+}
+
+.header-left a:hover{
+    color: var(--clr-primary-2);
+}
+
+.header-left img{
     height: 100%;
 }
 
-.header-nav .second-part{
+
+
+
+/* header-right */
+.header-right{
     width: 100%;
     display: flex;
     align-items: center;
@@ -60,49 +50,55 @@
     display: none;
 }
 
-.second-part label{
+.header-right label{
     display: none;
 }
 
-.header-nav .second-part .list-down-container{
+.header-list-down-container{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-nav .second-part .middle{
+.header-list-down-middle{
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-nav .second-part .right{
+.header-list-down-right{
     width: 50%;
     display: flex;
     justify-content: right;
     align-items: right;
 }
 
-.header-nav ul{
+/* cek sekali lagi kegunaan kedua code ini */
+/* .list-down-container ul{
     display: flex;
     width: auto;
-}
+} */
 
-.header-nav li{
+/* .list-down-container li{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.navbar-menu{
+.header-navbar-menu{
     font-size: var(--default-font-size);
     padding: 0.5rem;
     font-weight: bold;
 }
 
-.header-nav button{
+.header-navbar-menu a{
+    color : black;
+    text-decoration: none;
+}
+
+.header-list-down-right button{
     display: flex;
     align-items: center;
     border: none;
@@ -111,38 +107,6 @@
     border-radius: var(--btn-radius);
     padding: .5rem 1rem;
     margin-right: 1rem;
-}
-
-.header-nav .primary-btn{
-    background-image: var(--clr-btn-primary);
-    color: white;
-    box-shadow : var(--btn-box-shadow);
-    transition: 0.3s;
-    /* background-blend-mode : lighten; */
-}
-
-.primary-btn:hover{
-    /* transform: scale(1.2); */
-    filter : brightness(70%);
-}
-
-.secondary-btn{
-    background-color: white;
-    color: var(--clr-primary-2);
-    border-color: var(--clr-primary-2);
-    border: solid 1px;
-    transition: 0.3s;
-}
-
-.secondary-btn:hover{
-    /* transform: scale(1.2); */
-    background-image: var(--clr-btn-primary);
-    color: white;
-    filter : brightness(70%);
-}
-
-.actived{
-    color: var(--clr-primary-2);
 }
 
 
