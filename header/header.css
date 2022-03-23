@@ -28,14 +28,54 @@ button:hover{
     position : fixed;
     background-color : white;
     z-index : 1;
+    min-width: 675px;
 }
 
 .header-nav .left{
     height: 100%;
+    width: 50%;
 }
 
 .header-nav img{
     height: 100%;
+}
+
+.header-nav .second-part{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#check{
+    display: none;
+}
+
+label{
+    display: none;
+}
+
+.header-nav .second-part .list-down-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+
+.header-nav .second-part .middle{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav .second-part .right{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    border: red solid;
 }
 
 ul{
@@ -47,7 +87,6 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
 }
 
 .navbar-menu{
@@ -98,17 +137,74 @@ button{
     color: var(--clr-primary-2);
 }
 
+
+
 /* Layar Mobile */
-@media (max-width: 578px) {
+@media (max-width: 414px) {
     .header-nav{
         background-color: skyblue;
     }
 
-    .middle{
-        display: none;
+    .second-part{
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
     }
 
-    .right{
-        display: none;
+    .header-nav .second-part .list-down-container{
+        display: flex;
+        justify-content: space-between;
+        position:fixed;
+        position: fixed;
+        width: 60vw;
+        z-index: 999;
+        flex-direction: column;
+        top: 5rem;
+        right: 0;
+        bottom:58vh;
+        transform:translateX(100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .header-nav .second-part .middle{
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        display: flex;
+        
+    }
+
+    .header-nav .second-part .middle li{
+        width: 100%;
+        display: flex;
+        align-items: left;
+        justify-content: left;
+    }
+
+    .header-nav .second-part .right{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .header-nav .second-part .right li button{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.5rem;
+    }
+
+    label{
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border: solid red;
     }
 }
