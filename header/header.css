@@ -23,7 +23,7 @@ button:hover{
 .header-nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: 4rem;
     position : fixed;
     background-color : white;
