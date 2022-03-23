@@ -6,27 +6,29 @@
     list-style-type: none;
 }
 
-a{
+.header-nav a{
     text-decoration: none;
     color: black;
 }
 
-a:hover{
+.header-nav a:hover{
     color: var(--clr-primary-2);
 }
 
-
-button:hover{
+.header-nav button:hover{
     cursor: pointer;
 }
 
 .header-nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 4rem;
-    position : fixed;
-    background-color : white;
+    height: 10vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color : blue;
     z-index : 1;
     min-width: 675px;
 }
@@ -51,7 +53,7 @@ button:hover{
     display: none;
 }
 
-label{
+.second-part label{
     display: none;
 }
 
@@ -76,12 +78,12 @@ label{
     align-items: right;
 }
 
-ul{
+.header-nav ul{
     display: flex;
     width: auto;
 }
 
-li{
+.header-nav li{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +95,7 @@ li{
     font-weight: bold;
 }
 
-button{
+.header-nav button{
     display: flex;
     align-items: center;
     border: none;
@@ -101,9 +103,10 @@ button{
     font-size: calc(var(--default-font-size) - .15rem);
     border-radius: var(--btn-radius);
     padding: .5rem 1rem;
+    margin-right: 1rem;
 }
 
-.primary-btn{
+.header-nav .primary-btn{
     background-image: var(--clr-btn-primary);
     color: white;
     box-shadow : var(--btn-box-shadow);
@@ -138,9 +141,13 @@ button{
 
 /* Layar Mobile */
 @media (max-width: 414px) {
+
     .header-nav{
+        position: fixed;
+        top: 0;
         justify-content: center;
         align-items: center;
+        background-color: aqua;
     }
     
     .second-part{
@@ -151,14 +158,15 @@ button{
 
     .header-nav .second-part .list-down-container{
         display: flex;
+        background-color: white;
         justify-content: space-between;
         position:fixed;
         position: fixed;
         width: 60vw;
-        z-index: 999;
+        z-index: 99;
         flex-direction: column;
-        top: 5rem;
-        right: 0;
+        top: 10vh;
+        right:0vw;
         bottom:58vh;
         transform:translateX(100%);
         transition: all 0.5s ease-in-out;
@@ -196,10 +204,10 @@ button{
         margin: 0 0.5rem;
     }
 
-    label{
+    .second-part label{
         display: flex;
         position: fixed;
-        top: 2rem;
+        top: 3vh;
         right: 1rem;
         width: 2rem;
         height: 2rem;
