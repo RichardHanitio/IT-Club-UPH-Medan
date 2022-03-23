@@ -60,7 +60,6 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid;
 }
 
 .header-nav .second-part .middle{
@@ -75,7 +74,6 @@ label{
     display: flex;
     justify-content: right;
     align-items: right;
-    border: red solid;
 }
 
 ul{
@@ -138,13 +136,13 @@ button{
 }
 
 
-
 /* Layar Mobile */
 @media (max-width: 414px) {
     .header-nav{
-        background-color: skyblue;
+        justify-content: center;
+        align-items: center;
     }
-
+    
     .second-part{
         display: flex;
         flex-direction: column;

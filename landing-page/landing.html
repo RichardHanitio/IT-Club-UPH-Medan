@@ -15,24 +15,48 @@
         <!-- Logo -->
         <div class="left">
             <a href="/landing-page/landing.html">
-                <img src="../images/itclublogo.png" alt="" class="fit">
+                <img src="/images/itclublogo.png" alt="" class="fit">
             </a>
-            
         </div>
 
-        <!-- Navbar menu -->
-        <ul class="middle">
-            <li class="navbar-menu actived">HOME</li>
-            <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-            <li class="navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
-        </ul>
+        <div class="second-part">
+            <input type="checkbox" id="check" onclick="isChecked()">
+            <label for="check">
+                <i class="fas fa-bars"></i>
+            </label>
 
-        <!-- Regis and login button -->
-        <ul class="right">
-            <li><button class="primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-            <li><button class="secondary-btn">Log in</button></li>
-        </ul>
+            <div class="list-down-container" id="list-down">
+                <ul class="middle">
+                    <li class="navbar-menu actived"><a href="../landing-page/landing.html">HOME</a></li>
+                    <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
+                    <li class="navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
+                </ul>
+        
+                <!-- Regis and login button -->
+                <ul class="right">
+                    <li><button class="primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
+                    <li><button class="secondary-btn">Log in</button></li>
+                </ul>
+            </div>
+            <!-- Navbar menu -->
+            
+        </div>
+        
+        
     </div>
+
+    <script>
+        var headerMobile = document.querySelector('.list-down-container')
+
+        function isChecked(){
+            if(document.getElementById("check").checked){
+                headerMobile.style.transform = "translateX(0)"
+            }
+            else{
+                headerMobile.style.transform = "translateX(100%)"
+            }
+        }
+    </script>
 
     <main>
         <div class="content-container-1">
