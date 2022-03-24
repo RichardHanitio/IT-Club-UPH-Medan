@@ -1,5 +1,4 @@
 @import "global_styles.css";
-@import "/header/header.css";
 
 *{
     box-sizing: border-box;
@@ -29,6 +28,10 @@ a{
     width: 90%;
 }
 
+.first-content-right p{
+    line-height : var(--line-spacing);
+}
+
 .first-content .first-content-left{
     width: 50%;
     display: flex;
@@ -51,7 +54,7 @@ a{
 
 .first-content .first-content-right h1{
     font-size: var(--header-1-font-size);
-    color : var(--clr-primary-1);
+    color : var(--clr-primary);
 }
 
 .first-content .first-content-right p{
@@ -120,6 +123,7 @@ a{
     color: white;
     font-size: var(--default-font-size);
     padding: 1rem 0;
+    text-decoration : none;
 }
 
 .second-content .event-container .event .poster img{
@@ -215,7 +219,7 @@ a{
 }
 
 .fourth-content .fourth-content-right .title{
-    color: var(--clr-primary-1);
+    color: var(--clr-primary);
     font-weight: bold;
     font-size: var(--header-2-font-size);
     margin-bottom: 2%;
@@ -245,7 +249,7 @@ a{
     width: 100%;
     padding: 0.5rem 1rem;
     border-radius: var(--btn-radius);
-    border: var(--clr-primary-1 ) solid 1px;
+    border: var(--clr-primary) solid 1px;
     margin-bottom: 2%;
 }
 
@@ -259,7 +263,7 @@ a{
 #message{
     resize: none;
     border-radius: var(--btn-radius);
-    border: var(--clr-primary-1) solid 1px;
+    border: var(--clr-primary) solid 1px;
     padding: 0.5rem 1rem;
     font-size: var(--default-font-size);
     margin-bottom: 2%;
@@ -293,7 +297,7 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color:var(--clr-primary-1);
+    background-color:var(--clr-primary);
     padding: 1%;
     color: white;
     font-size: var(--default-font-size);

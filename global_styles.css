@@ -12,7 +12,7 @@
 :root{
     /* font & text */
     --font-family : "Montserrat", sans-serif;
-    --default-font-size : 1rem;
+    --default-font-size : .9rem;
     --header-1-font-size : 3rem;
     --header-2-font-size : 2.3rem;
     --header-3-font-size : 1.5rem;
@@ -49,6 +49,14 @@
 
 /* buttons */
 .btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 0 1rem 0 0;
+    font-size: calc(var(--default-font-size) - .15rem);
+    border-radius: var(--btn-radius);
+    padding: .5rem 1rem;
+    margin-right: 1rem;
     cursor : pointer;
 }
 
@@ -75,9 +83,19 @@
 }
 
 .active-page{
+    position : relative;
     color : var(--clr-secondary);
+    filter : brightness(80%);
 }
-
+.active-page::after{
+    position : absolute;
+    content : "";
+    width : 50%;
+    height : 3px;
+    background-color : var(--clr-secondary);
+    bottom : 0;
+    left : 25%;
+}
 
 
 /* header's CSS */
@@ -102,9 +120,6 @@
 .header-left a{
     text-decoration: none;
     color: black;
-}
-.header-left a:hover{
-    color: var(--clr-primary-2);
 }
 .header-left img{
     height: 100%;
@@ -164,15 +179,4 @@
 
 .header-navbar-menu a:hover{
     color : var(--clr-secondary);
-}
-
-.header-list-down-right button{
-    display: flex;
-    align-items: center;
-    border: none;
-    margin: 0 1rem 0 0;
-    font-size: calc(var(--default-font-size) - .15rem);
-    border-radius: var(--btn-radius);
-    padding: .5rem 1rem;
-    margin-right: 1rem;
 }
