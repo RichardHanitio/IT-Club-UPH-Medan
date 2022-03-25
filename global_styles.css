@@ -89,6 +89,7 @@
     font-size : calc(var(--default-font-size) - .2rem);
     padding : .5% 0;
     text-decoration: underline;
+    background : none;
 }
 
 
