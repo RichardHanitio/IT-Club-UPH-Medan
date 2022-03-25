@@ -1,4 +1,4 @@
-@import "/styles.css";
+@import "/global_styles.css";
 
 body{
     background : url(../images/itclub1.jpg);
@@ -48,35 +48,23 @@ body{
 }
 
 .title{
+    color : black;
     align-self : center;
     margin-top : 5%;
     margin-bottom : 2%;
     font-size : var(--header-3-font-size);
 }
 
-.btn{
-    border : none;
-    background : none;
-    font-size : calc(var(--default-font-size) - .1rem);
-    color : white;
-    border-radius : var(--btn-radius);
-    cursor : pointer;
-}
 
 .next-btn {
-    border-radius : var(--btn-radius);
-    padding : 1.5%;
-    background : var(--clr-btn-primary);
     align-self : flex-end;
+    margin-right : 0;
     margin-top : 6%;
     width : 20%;
+    justify-content :center;
     margin-bottom : 5%;
 }
 
-.next-btn:hover{
-    box-shadow : var(--btn-box-shadow);
-}
-
 input:focus {
-    border : 1px solid var(--clr-primary-1);
+    border : 1px solid var(--clr-primary);
 }

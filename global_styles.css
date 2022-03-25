@@ -83,6 +83,15 @@
     filter : brightness(70%);
 }
 
+.tertiary-btn{
+    color : var(--clr-secondary);
+    width : 20%;
+    font-size : calc(var(--default-font-size) - .2rem);
+    padding : .5% 0;
+    text-decoration: underline;
+}
+
+
 .active-page{
     position : relative;
     color : var(--clr-secondary);
