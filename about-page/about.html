@@ -11,27 +11,36 @@
 </head>
 <body>
     <!-- header -->
-    <div class="header-nav">
+    <header class="header-nav">
         <!-- Logo -->
-        <div class="left">
+        <div class="header-left">
             <a href="/landing-page/landing.html">
-                <img src="/images/itclublogo.png" alt="" class="fit">
+                <img src="/images/itclublogo.png" alt="IT Club" class="fit">
             </a>
         </div>
 
-        <!-- Navbar menu -->
-        <ul class="middle">
-            <li class="navbar-menu"><a href="../landing-page/landing.html">HOME</a></li>
-            <li class="navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-            <li class="navbar-menu actived"><a href="../about-page/about.html">ABOUT US</a></li>
-        </ul>
+        <div class="header-right">
+            <label>
+                <input type="checkbox" id="check" onclick="isChecked()">
+                <i class="fas fa-bars"></i>
+            </label>
 
-        <!-- Regis and login button -->
-        <ul class="right">
-            <li><button class="primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-            <li><button class="secondary-btn">Log in</button></li>
-        </ul>
-    </div>
+            <div class="header-list-down-container" id="list-down">
+                <ul class="header-list-down-middle">
+                    <li class="header-navbar-menu"><a href="/index.html">HOME</a></li>
+                    <li class="header-navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
+                    <li class="header-navbar-menu active-page">ABOUT US</li>
+                </ul>
+        
+                <!-- Regis and login button -->
+                <ul class="header-list-down-right">
+                    <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
+                    <li><button class="btn secondary-btn">Log in</button></li>
+                </ul>
+            </div>
+            <!-- Navbar menu -->
+        </div>
+    </header>
 
     <!-- banner -->
     <div class="banner">
@@ -58,7 +67,7 @@
                 </div>
                 <div class="double-images">
                     <img src="/images/itclub1.jpg" alt="IT Club" class="img img-2">
-                    <img src="/images/itclub5.jpg" alt="IT Club" class="img img-3">
+                    <img src="/images/itclub6.jpg" alt="IT Club" class="img img-3">
                 </div>
             </div>
 
@@ -92,7 +101,7 @@
 
         <!-- partners -->
         <div class="partners">
-            <h2 class="title">PARTNERS</h2>
+            <h3 class="title-partners">PARTNERS</h3>
             <div class="logos">
                 <img src="/images/HMPTIF.png" class="logo" alt="">
                 <img src="/images/UPHMedan.png" class="logo logo-uph" alt="">

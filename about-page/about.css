@@ -1,7 +1,7 @@
 @import "/styles.css";
 
 main{
-    background-color : var(--clr-neutral-1);
+    background-color : var(--clr-neutral);
     width : 100%;
     height : 100%;
 }
@@ -13,7 +13,7 @@ main{
 
 /* img */
 .img{
-    width : 80%;
+    width : 70%;
     transition : .5s;
 }
 
@@ -23,35 +23,35 @@ main{
 
 .img-1{
     justify-self : end;
-    box-shadow : -4px 4px 8px var(--clr-primary-1);
+    box-shadow : -4px 4px 8px var(--clr-primary);
 }
 .img-1:hover{
-    transform : translate(2px, -2px);
-    box-shadow : -6px 6px 8px var(--clr-primary-1);
+    transform : translate(4px, -4px);
+    box-shadow : -8px 8px 10px var(--clr-primary);
 }
 
 .img-2{
-    box-shadow : -2px 2px 6px var(--clr-primary-1);
+    box-shadow : -2px 2px 6px var(--clr-primary);
 }
 .img-2:hover{
-    transform : translate(2px, -2px);
-    box-shadow : -4px 4px 6px var(--clr-primary-1);
+    transform : translate(4px, -4px);
+    box-shadow : -6px 6px 8px var(--clr-primary);
 }
 
 .img-3{
     position : absolute;
     left : 30%;
     top : 70%;
-    box-shadow : 2px 2px 4px var(--clr-primary-2);
+    box-shadow : 2px 2px 4px var(--clr-secondary);
 }
 .img-3:hover{
-    transform : translate(-2px, -2px);
-    box-shadow : 4px 4px 6px var(--clr-primary-2);
+    transform : translate(-4px, -4px);
+    box-shadow : 6px 6px 8px var(--clr-secondary);
 }
 
 /* text */
 .title{
-    color : var(--clr-primary-1);
+    color : var(--clr-primary);
     margin-bottom : 5%;
 }
 
@@ -67,7 +67,7 @@ main{
 
 .banner{
     width : 100%;
-    height : 75vh;
+    height : 80vh;
     background-image : url("/images/itclub2.jpg");
     background-size : cover;
     background-position : center;
@@ -109,10 +109,10 @@ main{
 .main-grid{
     width : 90%;
     margin : 0 auto;
-    padding : 5% 0;
+    padding : 8% 0 5%;
     display : grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height : 150vh;
+    min-height : 170vh;
 }
 
 .what-is-it-club{
@@ -129,7 +129,7 @@ main{
 
 .what-is-our-goal {
     text-align : right;
-    margin-top : 5%;
+    margin-top : 10%;
 }
 
 .double-images{
@@ -149,7 +149,7 @@ main{
 /* vision & mission */
 
 .vision-mission{
-    background-image : radial-gradient(circle at top, var(--clr-primary-2) 40%, var(--clr-primary-1));
+    background-image : radial-gradient(circle at top, var(--clr-secondary) 40%, var(--clr-primary));
     color : white;
     height : 45vh;
     font-size : var(--default-font-size);
@@ -186,6 +186,12 @@ main{
 
 /* partners */
 
+.title-partners{
+    font-size : var(--header-3-font-size);
+    color : var(--clr-primary);
+    margin-bottom : 3%;
+}
+
 .logo{
     width : 15%;
 }
@@ -211,7 +217,7 @@ main{
 /* footer */
 
 footer{
-    background-color : var(--clr-primary-1);
+    background-color : var(--clr-primary);
     padding : .5%;
 }
 
