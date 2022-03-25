@@ -74,7 +74,7 @@
 .secondary-btn{
     background : none;
     color: var(--clr-secondary);
-    border : 1px solid var(--secondary-btn);
+    border : 1px solid var(--clr-secondary);
     transition: 0.3s;
 }
 .secondary-btn:hover{
@@ -142,6 +142,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(0%);
+    transition: 0.8s ease-in-out;
 }
 .header-list-down-middle{
     width: 50%;
@@ -156,18 +158,6 @@
     align-items: right;
 }
 
-/* cek sekali lagi kegunaan kedua code ini */
-/* .list-down-container ul{
-    display: flex;
-    width: auto;
-} */
-
-/* .list-down-container li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .header-navbar-menu{
     font-size: var(--default-font-size);
     padding: 0.5rem;
@@ -181,3 +171,104 @@
 .header-navbar-menu a:hover{
     color : var(--clr-secondary);
 }
+
+@media screen and (max-width: 414px) {
+    .header-nav{
+        min-width: 0px;
+    }
+
+    .header-left{
+        width: 50%;
+    }
+
+    .header-right{
+        align-items: right;
+        width: 50%;
+        align-items: right;
+    }
+
+    .header-nav label{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: right;
+
+    }
+
+    #check{
+        display: none;
+    }
+
+    .header-list-down-container{
+        justify-content: space-between;
+        flex-direction: column;
+        position: fixed;
+        transform: translateX(100%);
+        top:7vh;
+        right: 0;
+        width: 50vw;
+        height: 30vh;
+        background-color: white;
+    }
+
+    .header-list-down-middle{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-list-down-middle li{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .header-list-down-right{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+        display: flex;
+    }
+
+    .menu-icon{
+        display: block;
+        margin-right: 1rem;
+        transition: all 0.5s;
+    }
+
+    .bar{
+        width: 7vw;
+        height: 0.3rem;
+        background-color: black;
+        border: solid 1px;
+        margin: 0.3rem 0;
+        transition: all 1s;
+    }
+
+    #btn-log-in{
+        margin: 0;
+    }
+
+    .anim1{
+        transform: rotate(-45deg) translate(-10px, 5px);
+        background-color: var(--clr-primary);
+        border: var(--clr-primary);
+    }
+
+    .anim2{
+        transform: scale(0);
+    }
+
+
+    .anim3{
+        transform: rotate(45deg) translate(-7px, -5px);
+        background-color: var(--clr-primary);
+        border: var(--clr-primary);
+    }
+
+    
+}
+
+
