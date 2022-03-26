@@ -74,12 +74,11 @@ div, p{
 .btn{
     display: flex;
     align-items: center;
+    justify-content: center;
     border: none;
-    margin: 0 1rem 0 0;
     font-size: calc(var(--default-font-size) - .15rem);
     border-radius: var(--btn-radius);
     padding: .5rem 1rem;
-    margin-right: 1rem;
     cursor : pointer;
 }
 
