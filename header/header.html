@@ -21,7 +21,11 @@
         <div class="header-right">
             <label>
                 <input type="checkbox" id="check" onclick="isChecked()">
-                <i class="fas fa-bars"></i>
+                <div class="menu-icon">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
             </label>
 
             <div class="header-list-down-container" id="list-down">
@@ -34,26 +38,36 @@
                 <!-- Regis and login button -->
                 <ul class="header-list-down-right">
                     <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-                    <li><button class="btn secondary-btn">Log in</button></li>
+                    <li><button class="btn secondary-btn" id="btn-log-in">Log in</button></li>
                 </ul>
             </div>
             <!-- Navbar menu -->
         </div>
-        
-        
     </header>
 
     <script>
-        var headerMobile = document.querySelector('.list-down-container')
+
+        var headerMobile = document.querySelector('.header-list-down-container')
+        var bar1 = document.getElementById('bar1')
+        var bar2 = document.getElementById('bar2')
+        var bar3 = document.getElementById('bar3')
 
         function isChecked(){
             if(document.getElementById("check").checked){
                 headerMobile.style.transform = "translateX(0)"
+                bar1.classList.toggle("anim1");
+                bar2.classList.toggle("anim2");
+                bar3.classList.toggle("anim3");
             }
             else{
                 headerMobile.style.transform = "translateX(100%)"
+                bar1.classList.toggle("anim1");
+                bar2.classList.toggle("anim2");
+                bar3.classList.toggle("anim3");
             }
         }
+
+
     </script>
 
 </body>
