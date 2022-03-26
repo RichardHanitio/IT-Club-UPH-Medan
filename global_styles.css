@@ -16,7 +16,13 @@
     --header-1-font-size : 2.8rem;
     --header-2-font-size : 2rem;
     --header-3-font-size : 1.5rem;
+    --footer-font-size : .8rem;
     --line-spacing : 1.6;
+
+    /* mobile font-size */
+    --mobile-default-font-size : .8rem;
+    --mobile-header-1 : 2rem;
+    --mobile-header-2 : 1.3rem;
 
     /* color */
     --clr-primary : #2473B5;
@@ -46,6 +52,20 @@
     font-family : var(--font-family);
     list-style-type: none;
     text-decoration : none;
+}
+
+h1{
+    font-size : var(--header-1-font-size);
+}
+h2{
+    font-size : var(--header-2-font-size);
+}
+h3{
+    font-size : var(--header-3-font-size);
+}
+div, p{
+    font-size : var(--default-font-size);
+    line-height : var(--line-spacing);
 }
 
 /* buttons */
@@ -164,18 +184,6 @@
     justify-content: right;
     align-items: right;
 }
-
-/* cek sekali lagi kegunaan kedua code ini */
-/* .list-down-container ul{
-    display: flex;
-    width: auto;
-} */
-
-/* .list-down-container li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .header-navbar-menu{
     font-size: var(--default-font-size);
