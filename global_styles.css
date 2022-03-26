@@ -6,6 +6,8 @@
     2. global attributes
     3. buttons (primary, secondary, tertiary)
     4. header
+    5. footer
+    6. mobile defaults
 */
 
 /* variables */
@@ -201,7 +203,36 @@ div, p{
     color : var(--clr-secondary);
 }
 
-@media screen and (max-width: 414px) {
+
+/* footer */
+footer{
+    background-color : var(--clr-primary);
+    min-height : 1.5rem;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+footer div{
+    color : white;
+    font-size : var(--footer-font-size);
+}
+
+
+@media screen and (max-width: 415px) {
+    div, p{
+        font-size : var(--mobile-default-font-size);
+    }
+    h1{
+        font-size : var(--mobile-header-1);
+    }
+    h2{
+        font-size : var(--mobile-header-2);
+    }
+    footer div {
+        font-size : var(--footer-font-size);
+    }
+
     .header-nav{
         min-width: 0px;
     }
@@ -222,7 +253,6 @@ div, p{
         height: 100%;
         align-items: center;
         justify-content: right;
-
     }
 
     #check{

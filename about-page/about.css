@@ -68,9 +68,12 @@ main{
 }
 
 .img-1:hover,
-.img-2:hover,
-.img-3:hover{
+.img-2:hover{
     transform : translate(4px, -4px);
+}
+
+.img-3:hover{
+    transform : translate(-4px, -4px);
 }
 
 .img-1:hover{
@@ -189,38 +192,8 @@ main{
 }
 
 
-/* footer */
-footer{
-    background-color : var(--clr-primary);
-    min-height : 1.5rem;
-    display : flex;
-    align-items : center;
-    justify-content : center;
-}
-
-footer div{
-    color : white;
-    font-size : var(--footer-font-size);
-}
-
-
-
-
-
 /* mobile */
 @media screen and (max-width: 600px){
-    div, p{
-        font-size : var(--mobile-default-font-size);
-    }
-    h1{
-        font-size : var(--mobile-header-1);
-    }
-    h2{
-        font-size : var(--mobile-header-2);
-    }
-    footer div {
-        font-size : var(--footer-font-size);
-    }
     .title{
         text-align : center;
     }
