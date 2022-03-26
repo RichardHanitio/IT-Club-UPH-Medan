@@ -74,7 +74,7 @@
 .secondary-btn{
     background : none;
     color: var(--clr-secondary);
-    border : 1px solid var(--secondary-btn);
+    border : 1px solid var(--clr-secondary);
     transition: 0.3s;
 }
 .secondary-btn:hover{

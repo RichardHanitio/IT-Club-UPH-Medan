@@ -68,3 +68,58 @@ body{
 input:focus {
     border : 1px solid var(--clr-primary);
 }
+
+@media screen and (max-width : 415px){
+    body {
+        background : none;
+    }
+
+    .inner-container{
+        display : flex;
+        min-width : 80%;
+        max-height : 90%;
+        background-color : white;
+        border-radius : .3rem;
+        flex-direction : column;
+        padding : 0 4% 0;
+        box-shadow : var(--events-box-shadow);
+        overflow : auto;
+    }
+
+    .field {
+        font-weight : 500;
+        font-size : var(--default-font-size);
+        margin-bottom : 2%;
+        margin-top : 3%;
+    }
+
+    .field input {
+        min-width : 100%;
+        min-height : 60%;
+        margin-top : 2%;
+        border-radius : .2rem;
+        outline : none;
+        border : 1px solid black;
+        padding : 2% 3%;
+        font-size : calc(var(--default-font-size) - .15rem);
+    }
+
+    .title{
+        color : black;
+        align-self : center;
+        margin-top : 5%;
+        margin-bottom : 2%;
+        font-size : var(--header-3-font-size);
+    }
+
+
+    .next-btn {
+        align-self : flex-end;
+        margin-right : 0;
+        margin-top : 6%;
+        width : 20%;
+        justify-content :center;
+        margin-bottom : 5%;
+    }
+
+}

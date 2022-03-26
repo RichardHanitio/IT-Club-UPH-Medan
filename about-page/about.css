@@ -1,28 +1,132 @@
 @import "/styles.css";
 
 main{
-    background-color : var(--clr-neutral);
     width : 100%;
     height : 100%;
+    background-color : var(--clr-neutral);
+}
+
+/* banner */
+
+.banner{
+    width : 100%;
+    height : 80vh;
+}
+
+.banner-container{
+    width : 100%;
+    height : 100%;
+    background-image : url("/images/itclub2.jpg");
+    background-size : cover;
+    background-position : center;
+    position : relative;
+}
+
+.banner-container::before{
+    content : "";
+    background-color : rgba(36, 115, 181, .5);
+    height : 100%;
+    display : block;
+    width : 100%;
+}
+
+.banner-caption {
+    color : white;
+    text-align : center;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+}
+
+.banner-caption h1{
+    font-size : var(--header-1-font-size);
+    margin-bottom : 6%;
+}
+
+.banner-caption div{
+    line-height : var(--line-spacing);
+    font-size : var(--default-font-size);
 }
 
 
+.main-container{
+    width : 90%;
+    height : 170vh;
+    margin : 0 auto;
+    padding-top : 3%;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.first-main-container,
+.second-main-container
+{
+    display : flex;
+}
 
 
-/* global */
-
-/* img */
 .img{
-    width : 70%;
-    transition : .5s;
+    width : 38%;
 }
 
 .img-2, .img-3{
-    width : 60%;
+    width : 80%;
+}
+
+.image-container{
+    display : grid;
+    grid-template-columns : repeat(3, 1fr);
+    grid-template-rows : repeat(2, 1fr);
+    /* background-color : pink; */
+}
+
+.img-2{
+    grid-column : 1 / span 2;
+    grid-row : 1 / span 2;
+}
+
+.img-3{
+    grid-column : 2 / span 2;
+    grid-row : 2 / span 2;
+}
+
+
+
+.what-is-it-club,
+.what-is-our-goal
+{
+    align-self : center;
+}
+
+.what-is-it-club {
+    margin-right : 10%;
+}
+.what-is-our-goal{
+    text-align : right;
+}
+
+.what-is-it-club div,
+.what-is-our-goal div
+{
+    margin-top : 2%;
+    line-height : var(--line-spacing);
+    font-size : var(--default-font-size);
+}
+
+.what-is-it-club h2,
+.what-is-our-goal h2{
+    font-size : var(--header-2-font-size);
+    color : var(--clr-primary);
+}
+
+
+
+.img{
+    transition : .5s;
 }
 
 .img-1{
-    justify-self : end;
     box-shadow : -4px 4px 8px var(--clr-primary);
 }
 .img-1:hover{
@@ -39,192 +143,13 @@ main{
 }
 
 .img-3{
-    position : absolute;
-    left : 30%;
-    top : 70%;
+
     box-shadow : 2px 2px 4px var(--clr-secondary);
+    z-index : 1;
 }
 .img-3:hover{
     transform : translate(-4px, -4px);
     box-shadow : 6px 6px 8px var(--clr-secondary);
-}
-
-/* text */
-.title{
-    color : var(--clr-primary);
-    margin-bottom : 5%;
-}
-
-.desc{
-    font-size : var(--default-font-size);
-    line-height : var(--line-spacing);
-}
-
-
-
-
-/* banner */
-
-.banner{
-    width : 100%;
-    height : 80vh;
-    background-image : url("/images/itclub2.jpg");
-    background-size : cover;
-    background-position : center;
-    position : relative;
-}
-
-.blue-background{
-    background-color: rgba(36, 115, 181, .5);
-    width : 100%;
-    height : 100%;
-}
-
-.banner-caption {
-    position : absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align : center;
-    color : white;
-}
-
-.banner-caption div:first-child{
-    font-weight : 700;
-    font-size : var(--header-1-font-size);
-    margin-bottom : 5%;
-}
-
-.banner-caption div:last-child{
-    line-height : var(--line-spacing);
-    font-size : var(--default-font-size);
-}
-
-
-
-
-/* main grid */
-
-.main-grid{
-    width : 90%;
-    margin : 0 auto;
-    padding : 8% 0 5%;
-    display : grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height : 170vh;
-}
-
-.what-is-it-club{
-    grid-row : span 2;
-    display : flex;
-    flex-direction : column;
-    justify-content : space-around;
-}
-
-.it-club{
-    font-size : calc(var(--default-font-size) + .3rem);
-    font-weight : 600;
-}
-
-.what-is-our-goal {
-    text-align : right;
-    margin-top : 10%;
-}
-
-.double-images{
-    position : relative;
-}
-
-.what-is-it-club .desc{
-    margin-left : 2rem;
-}
-
-.what-is-our-goal .desc{
-    margin-right : 2rem;
-}
-
-
-
-/* vision & mission */
-
-.vision-mission{
-    background-image : radial-gradient(circle at top, var(--clr-secondary) 40%, var(--clr-primary));
-    color : white;
-    height : 45vh;
-    font-size : var(--default-font-size);
-    margin-top : 8%;
-}
-
-.outer-margin{
-    display : flex;
-    align-items : center;
-    margin : 0 auto;
-    width : 90%;
-    height : 100%;
-}
-
-.mission, .vision{
-    text-align : center;
-    padding : 0 10%;
-}
-
-.mission h2,
-.vision h2{
-    margin-bottom : 5%;
-}
-
-.mission div,
-.vision div{
-    margin-bottom : 5%;
-    line-height : var(--line-spacing);
-}
-
-
-
-
-
-/* partners */
-
-.title-partners{
-    font-size : var(--header-3-font-size);
-    color : var(--clr-primary);
-    margin-bottom : 3%;
-}
-
-.logo{
-    width : 15%;
-}
-
-.logos{
-    display : flex;
-    justify-content : space-around;
-    align-items : center;
-}
-
-.logo-uph{
-    width : 20%;
-}
-
-.partners{
-    text-align: center;
-    padding : 5% 0;
-}
-
-
-
-
-/* footer */
-
-footer{
-    background-color : var(--clr-primary);
-    padding : .5%;
-}
-
-footer div{
-    color : white;
-    text-align: center;
-    font-size : calc(var(--default-font-size) - .1rem);
 }
 
 
@@ -232,26 +157,73 @@ footer div{
 /* mobile */
 @media screen and (max-width: 415px){
     .banner{
-        height : 60vh;
+        height : 50vh;
+        width : 100%;
         background-size : cover;
         background-position : right;
     } 
-    .banner-caption div:first-child {
+    .banner-caption h1 {
         font-size : 1.8rem;
     }
-    .banner-caption div:last-child {
+    .banner-caption div {
         font-size : .8rem;
     }
 
-    .title{
-        font-size : 1.2rem;
+    .main-container {
+        width : 90%;
+        height : 110vh;
+        justify-content : space-between;
     }
-    .desc{
-        font-size : .8rem;
+
+    .main-container h2{
+        font-size : 1.3rem;
+    }
+    .first-main-container {
+        flex-direction : column;
+        flex-grow : 1;
+        justify-content : space-around;
+    }
+    .img-1{
+        align-self : center;
+        width : 60%;
+    }
+
+    .what-is-it-club h2{
+        text-align : center;
+    }
+    .what-is-it-club div,
+    .what-is-our-goal div
+    {
+        text-align : justify;
+    }
+
+    .second-main-container{
+        flex-direction: column;
+        flex-grow : 1;
+        justify-content : space-around;
+    }
+
+    .what-is-our-goal{
+        text-align : center;
+    }
+
+    .image-container{
+        order : 1;
+        width : 90%;
+        margin : 0 auto;
+    }
+
+    .img-2{
+        width : 100%;
+    }
+
+    .img-3{
+        width : 100%;
+    }
+
+    footer div{
+        font-size : .7rem;
     }
 
 
-    .main-grid{
-        width : 95%;
-    }
 }
