@@ -1,31 +1,19 @@
-@import "/styles.css";
-
-main{
-    width : 100%;
-    height : 100%;
-    background-color : var(--clr-neutral);
-}
+@import "/global_styles.css";
 
 /* banner */
-
 .banner{
     width : 100%;
-    height : 80vh;
-}
-
-.banner-container{
-    width : 100%;
-    height : 100%;
+    min-height : 28rem;
     background-image : url("/images/itclub2.jpg");
     background-size : cover;
     background-position : center;
     position : relative;
 }
 
-.banner-container::before{
+.banner::before{
     content : "";
     background-color : rgba(36, 115, 181, .5);
-    height : 100%;
+    min-height : 28rem;
     display : block;
     width : 100%;
 }
@@ -41,7 +29,7 @@ main{
 
 .banner-caption h1{
     font-size : var(--header-1-font-size);
-    margin-bottom : 6%;
+    margin-bottom : 5%;
 }
 
 .banner-caption div{
@@ -50,11 +38,20 @@ main{
 }
 
 
+
+/* main */
+
+main{
+    width : 100%;
+    height : 100%;
+    background-color : var(--clr-neutral);
+}
+
 .main-container{
     width : 90%;
-    height : 170vh;
+    min-height : 65rem;
     margin : 0 auto;
-    padding-top : 3%;
+    padding : 3% 0;
     display : flex;
     flex-direction: column;
     justify-content: space-around;
@@ -78,7 +75,6 @@ main{
     display : grid;
     grid-template-columns : repeat(3, 1fr);
     grid-template-rows : repeat(2, 1fr);
-    /* background-color : pink; */
 }
 
 .img-2{
@@ -92,6 +88,9 @@ main{
 }
 
 
+.what-is-it-club{
+    margin-right : 10%;
+}
 
 .what-is-it-club,
 .what-is-our-goal
@@ -99,9 +98,6 @@ main{
     align-self : center;
 }
 
-.what-is-it-club {
-    margin-right : 10%;
-}
 .what-is-our-goal{
     text-align : right;
 }
@@ -143,7 +139,6 @@ main{
 }
 
 .img-3{
-
     box-shadow : 2px 2px 4px var(--clr-secondary);
     z-index : 1;
 }
@@ -153,38 +148,108 @@ main{
 }
 
 
+.vision-mission-container{
+    background-image : radial-gradient(circle at top, var(--clr-secondary) 40%, var(--clr-primary));
+    color : white;
+    min-height : 17rem;
+    display : flex;
+    align-items : center;
+}
+
+.vision-mission{
+    width : 90%;
+    height : 100%;
+    margin : 0 auto;
+    display : flex;
+    font-size : var(--default-font-size);
+}
+
+.mission, .vision{
+    text-align : center;
+    align-self : center;
+    line-height : var(--line-spacing);
+}
+
+.mission h3,
+.vision h3{
+    margin-bottom : 3%;
+}
+
+.mission{
+    margin-right : 10%;
+}
+
+.partners-container{
+    min-height : 25rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+}
+
+.partners-container h2{
+    font-size : var(--header-2-font-size);
+    color : var(--clr-primary);
+    margin-bottom : 3%;
+}
+
+.partners-logo-container{
+    width : 90%;
+    margin : 0 auto;
+    display : flex;
+    align-items : center;
+    justify-content : space-around;
+}
+
+.partners-logo{
+    width : 20%;
+}
+
+footer{
+    background-color : var(--clr-primary);
+    min-height : 1.5rem;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+footer div{
+    color : white;
+    font-size : calc(var(--default-font-size) - .1rem);
+}
+
 
 /* mobile */
-@media screen and (max-width: 415px){
+@media screen and (max-width: 600px){
+    /* banner */
     .banner{
-        height : 50vh;
-        width : 100%;
         background-size : cover;
         background-position : right;
     } 
-    .banner-caption h1 {
-        font-size : 1.8rem;
-    }
     .banner-caption div {
         font-size : .8rem;
     }
 
-    .main-container {
-        width : 90%;
-        height : 110vh;
-        justify-content : space-between;
+    .what-is-it-club{
+        margin : 0;
     }
 
-    .main-container h2{
-        font-size : 1.3rem;
+
+    /* main */
+    .main-container {
+        /* width : 90%; */
+        min-height : 65rem;
+        justify-content : space-between;
+        padding : 10% 0;
     }
+
     .first-main-container {
         flex-direction : column;
         flex-grow : 1;
-        justify-content : space-around;
     }
     .img-1{
         align-self : center;
+        margin-top : 5%;
         width : 60%;
     }
 
@@ -221,9 +286,12 @@ main{
         width : 100%;
     }
 
-    footer div{
-        font-size : .7rem;
+    .partners-container{
+        min-height : 18rem;
     }
 
+    footer div{
+        font-size : .6rem;
+    }
 
 }
