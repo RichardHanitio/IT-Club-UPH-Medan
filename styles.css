@@ -47,12 +47,10 @@ a{
 }
 
 .first-content .first-content-right h1{
-    font-size: var(--header-1-font-size) 2rem;
     color : var(--clr-primary);
 }
 
 .first-content .first-content-right p{
-    font-size: var(--default-font-size);
     margin: 5% 0;
 }
 
@@ -171,6 +169,10 @@ a{
 
 .third-content .third-content-right img{
     width: 90%;
+}
+
+.learn-more-btn{
+    font-weight : 600;
 }
 
 

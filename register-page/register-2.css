@@ -1,34 +1,26 @@
 @import "register.css";
 
-
-.field:first-child{
-    margin-top : 10%;
+input[type="checkbox"]{
+    width : 15px;
+    height : 15px;
+    margin : .2rem;
 }
 
 .field-show-pass{
-    font-size : calc(var(--default-font-size) - .25rem);
     display : flex;
     align-items : center;
-    margin-bottom : 10%;
 }
 
-.field-show-pass input{
-    transform : scale(.8);
-    margin-right : 1.2%;
+.field-show-pass span{
+    font-size : calc(var(--default-font-size) - .2rem);
 }
 
-.register-btn{
+.register-btn {
     width : 90%;
-    align-self : center;
-    justify-content : center;
-    margin-bottom : 2%;
-    padding : 1.5% 0;
+    margin : 0 auto;
 }
 
 .previous-btn{
-    margin-bottom : 10%;
-    align-self: center;
-    justify-content: center;
+    width : 20%;
+    margin : .5rem auto;
 }
-
-

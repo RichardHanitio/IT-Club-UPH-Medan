@@ -39,7 +39,6 @@
 
 .field {
     font-weight : 500;
-    font-size : var(--default-font-size);
 }
 
 .field input {
