@@ -71,6 +71,10 @@ div, p{
     line-height : var(--line-spacing);
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 /* buttons */
 .btn{
     display: flex;
@@ -217,6 +221,7 @@ footer div{
     color : white;
     font-size : var(--footer-font-size);
 }
+
 
 
 @media screen and (max-width: 415px) {

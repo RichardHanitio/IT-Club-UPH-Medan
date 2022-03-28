@@ -1,6 +1,5 @@
 @import "global_styles.css";
 
-
 a{
     cursor: pointer;
 }
@@ -153,12 +152,11 @@ a{
     font-size: var(--default-font-size);
 }
 
-/* .third-content .third-content-left button{
-    border: var(--clr-primary-1) solid 1px;
-    color: var(--clr-primary-1) ;
-    font-weight: bold;
-    font-size: var(--default-font-size);
-} */
+.third-content .third-content-left button{
+    min-width: 15rem;
+    height: 2rem;
+    border-radius: var(--btn-radius);
+}
 
 .third-content .third-content-right{
     width: 50%;
@@ -295,4 +293,105 @@ footer{
     padding: 1%;
     color: white;
     font-size: var(--default-font-size);
+}
+
+
+/* Mobile */
+@media (max-width:414px){
+    /* first content mobile */
+
+    .content-container-1{
+        width: 100%;
+    }
+    .first-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .first-content .first-content-left{
+        height: auto;
+        width: 100vw;
+        width: 100%;
+    }
+
+    .first-content-right{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first-content-right p{
+        display: none;
+    }
+
+    .first-content-right button{
+        margin: 1rem 0;
+    }
+
+    /* Second Content Mobile */
+    #event-1{
+        width: 80%;
+    }
+
+    #event-2{
+        display: none;
+    }
+
+    #event-3{
+        display: none;
+    }
+
+    /*  Third Content Mobile */
+    .third-content{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+
+    .third-content .third-content-left{
+        width:100%;
+        text-align: center;
+    }
+
+    .third-content .third-content-left h1{
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+    .third-content .third-content-left p{
+        display: none;
+    }
+
+    .third-content .third-content-left button{
+        margin: 2rem 0;
+    }
+
+    .third-content .third-content-right{
+        width: 100%;
+    }
+
+    /* Fourth Content Mobile */
+    .fourth-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fourth-content .fourth-content-left{
+        width: auto;
+        height: 50%;
+
+    }
+
+    .fourth-content .fourth-content-right{
+        justify-content: flex-start;
+    }
+
+    .contact-title-desc{
+        display: none;
+    }
+
+    .contact-us-form{
+        display: none;
+    }
+
 }
