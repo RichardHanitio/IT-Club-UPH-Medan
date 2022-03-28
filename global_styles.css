@@ -134,7 +134,8 @@ div, p{
 /* header's CSS */
 
 .header-nav {
-    position: fixed;
+    position: sticky;
+    top : 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
