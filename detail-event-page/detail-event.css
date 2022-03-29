@@ -1,6 +1,5 @@
 @import "/global_styles.css";
 
-
 main {
     min-height : calc(100vh - 4rem);
     width : 100%;
@@ -10,7 +9,7 @@ main {
     justify-content : center;
 }
 
-.container{
+.main-section{
     min-height : calc(100vh - 4rem - 2rem);
     width : 90%;
     display : flex;
@@ -18,38 +17,46 @@ main {
     justify-content : center;
 }
 
-.inner-container{
+.main-container{
     display : grid;
     grid-template-columns : 1fr 2fr;
-    grid-template-rows : repeat(4, 1fr);
+    grid-template-rows : repeat(4, minmax(1fr, 10rem));
     align-items : center;
     height : calc(100vh - 4rem - 2rem);
     width : 100%;
+    margin-bottom : 10px;
 }
 
-.img{
+.image-container{
     width : 85%;    
-    box-shadow : -5px 5px 4px rgb(0,0,0,40%);
     grid-row : 1 / span 4;
 }
 
-.title{
+.img{
+    width : 100%;
+    box-shadow : -5px 5px 4px rgb(0,0,0,40%);
+    transition : .5s;
+}
+
+.img:hover{
+    transform : translate(4px, -4px);
+    box-shadow : -9px 9px 4px rgb(0,0,0,40%);
+}
+
+.title-container,
+.desc-container,
+.datetime-container
+{
     color : white;
 }
 
-.desc{
-    color : white;
-    text-align : justify;
-}
-
-.proker{
+.subtitle{
     color : var(--clr-primary);
     font-weight : 700;
 }
 
-.date-time-place-price{
-    color : white;
-    align-items : center;
+.desc-container{
+    text-align : justify;
 }
 
 .datetime{
@@ -73,4 +80,49 @@ main {
 
 .button-container{
     justify-self : end;
+}
+
+@media screen and (max-width : 850px){
+    .main-section {
+        min-height : 62rem;
+    }
+
+    .main-container{
+        min-height : 62rem;
+        grid-template-columns : 1fr;
+    }
+
+    .image-container{
+        width : 70%;
+        justify-self : center;
+    }
+
+    .title-container{
+        justify-self : center;
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+    }
+
+    .image-container{
+        margin-bottom : 15px;
+    }
+
+    .datetime{
+        width : 100%;
+    }
+}
+
+@media screen and (max-width : 415px){
+    .main-section {
+        min-height : 53rem;
+    }
+
+    .main-container{
+        min-height : 53rem;
+    }
+
+    .image-container{
+        margin-bottom : 0;
+    }
 }

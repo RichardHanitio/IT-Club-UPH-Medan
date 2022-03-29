@@ -102,6 +102,7 @@ button:hover{
     color: var(--clr-secondary);
     border : 1px solid var(--clr-secondary);
     transition: 0.3s;
+    
 }
 .secondary-btn:hover{
     background-image: var(--clr-btn-primary);
@@ -164,7 +165,6 @@ button:hover{
 .header-right{
     width: 100%;
     display: flex;
-    background-color : lime;
     align-items: center;
     justify-content: space-between;
 }
@@ -181,16 +181,21 @@ button:hover{
     transition: 0.8s ease-in-out;
 }
 .header-list-down-middle{
-    width: 100%;
+    flex-basis : 88%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .header-list-down-right{
-    width: 25%;
+    flex-basis : 18%;
     display: flex;
     align-self : flex-end;
+    align-items : center;
     justify-content: space-around;
+}
+
+.header-list-down-right .primary-btn{
+    margin-right : 3px;
 }
 
 .header-navbar-menu{
@@ -224,7 +229,7 @@ footer div{
 
 
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 600px) {
     div, p{
         font-size : var(--mobile-default-font-size);
     }
