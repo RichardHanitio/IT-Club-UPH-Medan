@@ -79,6 +79,7 @@ a{
     width: 90%;
     height: 100%;;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .title{
@@ -90,15 +91,24 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .second-content .event-container .event{
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     width: 25%;
     align-items: center;
     max-width: max-content;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+}
+
+.second-content .event-container .event.show{
+    display: flex;
+    transition: all 1s ease-in-out;
 }
 
 .second-content .event-container .event:hover{
@@ -120,7 +130,32 @@ a{
     width: 100%;
 }
 
+.arrow{
+    font-size: 3rem;
+    width: 5vw;
+    height: 10vh;
+    border-radius: 100%;
+    background-color: rgb(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+}
 
+.arrow:hover{
+    color: black;
+    background-color: rgb(255, 255, 255, .25);
+}
+
+#prev-slide{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+#next-slide{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+}
 /* Third Content */
 
 .content-container-3{
@@ -178,7 +213,7 @@ a{
 
 .content-container-4{
     height: 100vh;
-    width: 100vw;
+    width: 99.1vw;
     background-color: #F2F7FB;
     display: flex;
     justify-content: center;

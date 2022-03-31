@@ -71,32 +71,45 @@
                 </h2>
 
                 <div class="event-container">
-                    <i class="fa-solid fa-user"></i>
+                    
 
-                    <a class="event" href="" id="event-1">
+                    <a class="event show" href="" id="event-1">
                         <div class="poster">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
-                        <div class="poster-title">Basic Coding Class</div>
+                        <div class="poster-title">Basic Coding Class 1</div>
                     </a>
 
-                    <a class="event" href="" id="event-2">
+                    <a class="event show" href="" id="event-2">
                         <div class="poster">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
-                        <div class="poster-title">Basic Coding Class</div>
+                        <div class="poster-title">Basic Coding Class 2</div>
                     </a>
 
-                    <a class="event" href="" id="event-3">
+                    <a class="event show" href="" id="event-3">
                         <div class="poster">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
-                        <div class="poster-title">Basic Coding Class</div>
+                        <div class="poster-title">Basic Coding Clas 3s</div>
                     </a>
 
-                    <i class="fa-solid fa-user"></i>
+                    <a class="event " href="" id="event-4">
+                        <div class="poster">
+                            <img src="/images/BCC_Poster2-02.png" alt="">
+                        </div>
+                        <div class="poster-title">Basic Coding Class 4</div>
+                    </a>
 
+                    <a class="event " href="" id="event-5">
+                        <div class="poster">
+                            <img src="/images/BCC_Poster2-02.png" alt="">
+                        </div>
+                        <div class="poster-title">Basic Coding Class 5</div>
+                    </a>
                 </div>
+                <button class="arrow" id="prev-slide"><</button>
+                <button class="arrow" id="next-slide">></button>
             </div>
         </div>
 
@@ -195,6 +208,57 @@
                 bar3.classList.toggle("anim3");
             }
         }
+
+        // Slide Javascript
+        var slidePos = 2;
+        var slides = document.getElementsByClassName('event');
+        var totalSlides = slides.length;
+        var slideArr = []
+
+        document.getElementById('prev-slide').addEventListener("click", function(){
+            console.log("Move left")
+            moveToPrevSlide();
+        })
+
+        document.getElementById('next-slide').addEventListener("click", function(){
+            console.log("Move Right")
+            moveToNextSlide();
+        })
+
+        function moveToNextSlide(){
+            if(slidePos == slides.length-1){
+                count =0;
+                slidePos = 2;
+
+                for(sld of slides){
+                    var removeSlide = slides[count +2];
+                    var newSlide = slides[count];
+                    removeSlide.classList.remove('show');
+                    newSlide.classList.add('show');
+                    count++;
+                }
+                
+            }
+            
+            else{
+                for(sld of slides){
+                    console.log("aa" + slidePos)
+
+                    var removeSlide = slides[slidePos-2];
+                    var newSlide = slides[slidePos+1];
+                    removeSlide.classList.remove('show');
+                    newSlide.classList.add('show');
+                }
+                slidePos++;
+            }
+        }
+
+        function moveToPrevSlide(){
+           
+        }
+
+
+
     </script>
 </body>
 </html>
