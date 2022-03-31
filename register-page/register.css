@@ -45,7 +45,7 @@
     width : 100%;
     min-height : 2rem;
     border-radius : .2rem;
-    padding-left : .5rem;
+    padding : .5rem;
     outline : none;
     border : 1px solid black;
     font-size : calc(var(--default-font-size) - .15rem);

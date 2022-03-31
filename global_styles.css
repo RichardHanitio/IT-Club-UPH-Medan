@@ -41,7 +41,7 @@
     --events-box-shadow : 6px 5px 6px rgb(0, 0, 0, 25%);
 
     /* community */
-    --clr-community : linear-gradient(to bottom, #92B9DA, #FFFFFF);
+    --clr-community : linear-gradient(to bottom, #92B9DA 20%, #FFFFFF 100%);
 }
 
 /* global attributes */
@@ -51,9 +51,12 @@
     box-sizing : border-box;
     margin : 0;
     padding : 0;
-    font-family : var(--font-family);
     list-style-type: none;
     text-decoration : none;
+}
+
+body {
+    font-family : var(--font-family);
 }
 
 h1{
@@ -81,10 +84,10 @@ button:hover{
     align-items: center;
     justify-content: center;
     border: none;
+    font-family : var(--font-family);
     font-size: calc(var(--default-font-size) - .15rem);
     border-radius: var(--btn-radius);
     padding: .5rem 1rem;
-    cursor : pointer;
 }
 
 .primary-btn{

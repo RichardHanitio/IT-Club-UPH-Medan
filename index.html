@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="../images/logo-without-name.png">
-    <script src="https://kit.fontawesome.com/b3bdc1a0ed.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/307dd45887.js" crossorigin="anonymous"></script>
     <title>IT Club</title>
 </head>
 <body>
-    <!-- Header container -->
     <header class="header-nav">
-        <!-- Logo -->
         <div class="header-left">
             <a href="/index.html">
                 <img src="/images/itclublogo.png" alt="IT Club" class="fit">
@@ -22,27 +20,21 @@
         <div class="header-right">
             <label>
                 <input type="checkbox" id="check" onclick="isChecked()">
-                <div class="menu-icon">
-                    <div class="bar" id="bar1"></div>
-                    <div class="bar" id="bar2"></div>
-                    <div class="bar" id="bar3"></div>
-                </div>
+                <i class="fas fa-bars"></i>
             </label>
 
             <div class="header-list-down-container" id="list-down">
                 <ul class="header-list-down-middle">
                     <li class="header-navbar-menu active-page">HOME</li>
                     <li class="header-navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-                    <li class="header-navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
+                    <li class="header-navbar-menu"><a href="/about-page/about.html">ABOUT US</a></li>
                 </ul>
         
-                <!-- Regis and login button -->
                 <ul class="header-list-down-right">
                     <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-                    <li><button class="btn secondary-btn" id="btn-log-in">Log in</button></li>
+                    <li><button class="btn secondary-btn">Login</button></li>
                 </ul>
             </div>
-            <!-- Navbar menu -->
         </div>
     </header>
 
@@ -71,7 +63,7 @@
                 </h2>
 
                 <div class="event-container">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-chevron-left events-icon events-icon-left"></i>
 
                     <a class="event" href="" id="event-1">
                         <div class="poster">
@@ -94,8 +86,9 @@
                         <div class="poster-title">Basic Coding Class</div>
                     </a>
 
-                    <i class="fa-solid fa-user"></i>
-
+                    <div>
+                    <i class="fa-solid fa-chevron-right events-icon events-icon-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,40 +119,45 @@
 
                 <div class="fourth-content-right">
                     <div class="contact-title-desc">
-                        <div class="title">
+                        <h2 class="title">
                             Contact Us
-                        </div>
+                        </h2>
                         <p>
                             Have any questions or feedback? We'd like to hear from you
                         </p>
                     </div>
 
-                    <form action="" class="contact-us-form">
-                        <label class="field">
-                            <div>Full Name</div>
-                            <input type="text" name="full-name" placeholder="Enter Your Full Name">
-                        </label>
+                    <div class="form-container">
+                        <form action="" class="contact-us-form">
+                            <label class="field">
+                                <div>Full Name</div>
+                                <input type="text" name="full-name" placeholder="Enter Your Full Name">
+                            </label>
 
-                        <label class="field">
-                            <div>Email</div>
-                            <input type="text" name="email" placeholder="Enter Your Email">
-                        </label>
+                            <label class="field">
+                                <div>Email</div>
+                                <input type="text" name="email" placeholder="Enter Your Email">
+                            </label>
 
-                        <label class="field-message">
-                            <div>Message</div>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
-                        </label>
+                            <label class="field field-message">
+                                <div>Message</div>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                            </label>
 
-                        <button type="submit" class="primary-btn">submit</button>
-                    </form>
+                            <button type="submit" class="btn primary-btn">Submit</button>
+                        </form>
+                    </div>
 
                     <div class="media-social">
-                        <p>or contact us via</p>
+                        <p>Or contact us via</p>
 
-                        <div class="sosmed">
-                            <a href=""><i class="fas fa-bar"></i></a>
-                            <a href=""><i class="fa fa-bar"></i></a>
-                            
+                        <div class="sosmed-container">
+                            <div>
+                                <img src="/images/instagram-logo.png" alt="" class="sosmed-logo instagram-logo">
+                            </div>
+                            <div>
+                                <img src="/images/gmail-logo.png" alt="" class="sosmed-logo gmail-logo">
+                            </div>
                         </div>
                     </div>
                     
