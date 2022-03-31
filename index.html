@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="../images/logo-without-name.png">
-    <script src="https://kit.fontawesome.com/b3bdc1a0ed.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/307dd45887.js" crossorigin="anonymous"></script>
     <title>IT Club</title>
 </head>
 <body>
-    <!-- Header container -->
+    <!-- header -->
     <header class="header-nav">
-        <!-- Logo -->
         <div class="header-left">
             <a href="/index.html">
                 <img src="/images/itclublogo.png" alt="IT Club" class="fit">
@@ -22,33 +21,28 @@
         <div class="header-right">
             <label>
                 <input type="checkbox" id="check" onclick="isChecked()">
-                <div class="menu-icon">
-                    <div class="bar" id="bar1"></div>
-                    <div class="bar" id="bar2"></div>
-                    <div class="bar" id="bar3"></div>
-                </div>
+                <i class="fas fa-bars"></i>
             </label>
 
             <div class="header-list-down-container" id="list-down">
                 <ul class="header-list-down-middle">
                     <li class="header-navbar-menu active-page">HOME</li>
                     <li class="header-navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-                    <li class="header-navbar-menu"><a href="../about-page/about.html">ABOUT US</a></li>
+                    <li class="header-navbar-menu"><a href="/about-page/about.html">ABOUT US</a></li>
                 </ul>
         
-                <!-- Regis and login button -->
                 <ul class="header-list-down-right">
                     <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-                    <li><button class="btn secondary-btn" id="btn-log-in">Log in</button></li>
+                    <li><button class="btn secondary-btn">Login</button></li>
                 </ul>
             </div>
-            <!-- Navbar menu -->
         </div>
     </header>
 
     <main>
-        <div class="content-container-1">
-            <div class="first-content">
+        <!-- first-section -->
+        <section class="first-section">
+            <div class="first-container">
                 <div class="first-content-left">
                     <img src="../images/itclublogo.png" alt="">
                 </div>
@@ -62,59 +56,62 @@
                     <button onclick="" class="btn primary-btn">Check Out Our Event</button>
                 </div>
             </div>
-        </div>  
+        </section>  
         
-        <div class="content-container-2">
-            <div class="second-content">
+        <!-- second-section -->
+        <section class="second-section">
+            <div class="second-container">
                 <h2 class="title">
                     Events
                 </h2>
 
                 <div class="event-container">
-                    
+                    <i class="fa-solid fa-chevron-left events-icon arrow" id="prev-slide"></i>
 
                     <a class="event show" href="" id="event-1">
-                        <div class="poster">
+                        <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 1</div>
                     </a>
 
                     <a class="event show" href="" id="event-2">
-                        <div class="poster">
+                        <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 2</div>
                     </a>
 
                     <a class="event show" href="" id="event-3">
-                        <div class="poster">
+                        <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
-                        <div class="poster-title">Basic Coding Clas 3s</div>
+                        <div class="poster-title">Basic Coding Class 3</div>
                     </a>
 
-                    <a class="event " href="" id="event-4">
-                        <div class="poster">
+                    <a class="event" href="" id="event-4">
+                        <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 4</div>
                     </a>
 
-                    <a class="event " href="" id="event-5">
-                        <div class="poster">
+                    <a class="event" href="" id="event-5">
+                        <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 5</div>
                     </a>
-                </div>
-                <button class="arrow" id="prev-slide"><</button>
-                <button class="arrow" id="next-slide">></button>
-            </div>
-        </div>
 
-        <div class="content-container-3">
-            <div class="third-content">
+                    <i class="fa-solid fa-chevron-right events-icon arrow" id="next-slide"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- third section -->
+        <section class="third-section">
+            <div class="third-container">
                 <div class="third-content-left">
                     <h1>Hi,</h1>
                     <h1>Welcome to our</h1>
@@ -129,56 +126,63 @@
                     <img src="/images/Community.png" alt="">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content-container-4">
-            <div class="fourth-content">
+
+        <!-- fourth section -->
+        <section class="fourth-section">
+            <div class="fourth-container">
                 <div class="fourth-content-left">
                     <img src="/images/itclublogo.png" alt="">
                 </div>
 
                 <div class="fourth-content-right">
                     <div class="contact-title-desc">
-                        <div class="title">
+                        <h2 class="title">
                             Contact Us
-                        </div>
+                        </h2>
                         <p>
                             Have any questions or feedback? We'd like to hear from you
                         </p>
                     </div>
 
-                    <form action="" class="contact-us-form">
-                        <label class="field">
-                            <div>Full Name</div>
-                            <input type="text" name="full-name" placeholder="Enter Your Full Name">
-                        </label>
+                    <div class="form-container">
+                        <form action="" class="contact-us-form">
+                            <label class="field">
+                                <div>Full Name</div>
+                                <input type="text" name="full-name" placeholder="Enter Your Full Name">
+                            </label>
 
-                        <label class="field">
-                            <div>Email</div>
-                            <input type="text" name="email" placeholder="Enter Your Email">
-                        </label>
+                            <label class="field">
+                                <div>Email</div>
+                                <input type="text" name="email" placeholder="Enter Your Email">
+                            </label>
 
-                        <label class="field-message">
-                            <div>Message</div>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
-                        </label>
+                            <label class="field field-message">
+                                <div>Message</div>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                            </label>
 
-                        <button type="submit" class="primary-btn">submit</button>
-                    </form>
+                            <button type="submit" class="btn primary-btn">Submit</button>
+                        </form>
+                    </div>
 
-                    <div class="media-social">
-                        <p>or contact us via</p>
+                    <div class="media-social-container">
+                        <p>Or contact us via</p>
 
-                        <div class="sosmed">
-                            <a href=""><i class="fas fa-bar"></i></a>
-                            <a href=""><i class="fa fa-bar"></i></a>
-                            
+                        <div class="sosmed-container">
+                            <div>
+                                <img src="/images/instagram-logo.png" alt="" class="sosmed-logo instagram-logo">
+                            </div>
+                            <div>
+                                <img src="/images/gmail-logo.png" alt="" class="sosmed-logo gmail-logo">
+                            </div>
                         </div>
                     </div>
                     
                 </div>
             </div>
-        </div>
+        </section>
 
         <footer>
             <div>

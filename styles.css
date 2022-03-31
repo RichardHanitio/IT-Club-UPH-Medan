@@ -1,90 +1,88 @@
 @import "global_styles.css";
-
 a{
     cursor: pointer;
 }
 
+body {
+    scroll-behavior: smooth !important;
+}
 
-/* First Content */
-.content-container-1{
+
+/* First Section */
+.first-section{
     width: 100%;
-    height: 100vh;
+    min-height : 110vh;
     display: flex;
     justify-content: center;
     background-color: #F2F7FB;
 }
 
-.first-content{
+.first-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height : 110vh;
     width: 90%;
+}
+
+.first-content-left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-content-left img{
+    width: 100%;
+    /* max-width: 1000px; */
+}
+
+.first-content-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first-content-right h1{
+    color : var(--clr-primary);
+    font-size : calc(var(--header-1-font-size) + .66rem);
 }
 
 .first-content-right p{
-    line-height : var(--line-spacing);
-}
-
-.first-content .first-content-left{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.first-content .first-content-left img{
-    width: 100%;
-    max-width: 1000px;
-}
-
-.first-content .first-content-right{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.first-content .first-content-right h1{
-    color : var(--clr-primary);
-}
-
-.first-content .first-content-right p{
     margin: 5% 0;
 }
 
-.first-content .first-content-right button{
+.first-content-right button{
     display: flex;
     justify-content: center;
     max-width: 15rem;
-    font-size: var(--default-font-size);
+    font-size : var(--default-font-size);
 }
 
 
-/* Second Content */
+/* Second Section */
 
-.content-container-2{
+.second-section{
     width: 100%;
-    height: 100vh;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
     background-image: var(--clr-events);
-
 }
 
-.second-content{
+.second-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    height: 100%;;
-    justify-content: space-evenly;
-    position: relative;
+    min-height: 95vh;
+    justify-content : space-around;
+    align-self : center;
 }
 
 .title{
     color: white;
-    font-size: var(--header-2-font-size);
 }
 
 .event-container{
@@ -94,7 +92,7 @@ a{
     position: relative;
 }
 
-.second-content .event-container .event{
+.event{
     display: none;
     justify-content: center;
     flex-direction: column;
@@ -106,31 +104,31 @@ a{
 
 }
 
-.second-content .event-container .event.show{
+.event.show{
     display: flex;
     transition: all 1s ease-in-out;
 }
 
-.second-content .event-container .event:hover{
+.event:hover{
     transform: scale(1.1);
     transition: 0.5s;
 }
 
-.second-content .event-container .event .poster{
+.poster-image{
     width: 100%;
 }
 
-.second-content .event-container .event .poster-title{
+.poster-title{
     color: white;
     font-size: var(--default-font-size);
     padding: 1rem 0;
 }
 
-.second-content .event-container .event .poster img{
+.poster-image img{
     width: 100%;
 }
 
-.arrow{
+/* .arrow{
     font-size: 3rem;
     width: 5vw;
     height: 10vh;
@@ -143,6 +141,16 @@ a{
 .arrow:hover{
     color: black;
     background-color: rgb(255, 255, 255, .25);
+} */
+.events-icon{
+    font-size : 1.7rem;
+    color : white;
+    cursor : pointer;
+    transition : .3s;
+}
+
+.events-icon:hover{
+    transform : scale(1.2);
 }
 
 #prev-slide{
@@ -156,51 +164,53 @@ a{
     top: 50%;
     right: 0%;
 }
-/* Third Content */
 
-.content-container-3{
+
+
+/* Third Section */
+
+.third-section{
     width: 100%;
-    height: 55rem;
+    min-height: 120vh;
     background-image: var(--clr-community);
     display: flex;
     justify-content: center;
 }
 
-.third-content{
+.third-container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 100vh;
+    min-height : 120vh;
 }
 
-.third-content .third-content-left{
+.third-content-left{
     width: 50%;
 }
 
-.third-content .third-content-left h1{
-    font-size: var(--header-1-font-size);
+.third-content-left h1{
+    color : var(--clr-primary);
 }
 
-.third-content .third-content-left p{
+.third-content-left p{
     margin: 5% 0;
-    font-size: var(--default-font-size);
 }
 
-.third-content .third-content-left button{
+.third-content-left button{
     min-width: 15rem;
     height: 2rem;
     border-radius: var(--btn-radius);
 }
 
-.third-content .third-content-right{
+.third-content-right{
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.third-content .third-content-right img{
+.third-content-right img{
     width: 90%;
 }
 
@@ -211,53 +221,95 @@ a{
 
 /* Fourth Content */
 
-.content-container-4{
-    height: 100vh;
-    width: 99.1vw;
+.fourth-section{
+    min-height: 100vh;
+    width: 100%;
     background-color: #F2F7FB;
     display: flex;
     justify-content: center;
+    align-items : center;
 }
 
-.fourth-content{
+.fourth-container{
     width: 90%;
-    height: 100%;
+    min-height : 90vh;
     display: flex;
     align-items: center;
 }
 
-.fourth-content .fourth-content-left{
+.fourth-content-left{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 100%;
-
 }
 
-.fourth-content .fourth-content-left img{
+.fourth-content-left img{
     width: 100%;
 }
 
-.fourth-content .fourth-content-right{
+.fourth-content-right{
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.fourth-content .fourth-content-right .title{
+.fourth-content-right h2{
     color: var(--clr-primary);
     font-weight: bold;
-    font-size: var(--header-2-font-size);
-    margin-bottom: 2%;
 }
 
-.fourth-content .fourth-content-right .contact-title-desc p{
-    margin: 3% 0;
+.contact-title-desc {
+    margin-bottom : 1.2rem;
 }
 
-.fourth-content .fourth-content-right form{
+.contact-title-desc{
+    display : flex;
+    flex-direction : column;
+}
+
+.form-container {
+    border-radius : .2rem;
+    background-color : white;
+}
+
+.contact-us-form{
+    width : 85%;
+    min-height : 22rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    margin : 1rem 2rem;
+}
+
+.field {
+    font-weight : 500;
+}
+
+.field input, .field textarea {
+    width : 100%;
+    min-height : 2rem;
+    border-radius : .2rem;
+    padding : .5rem;
+    outline : none;
+    border : 1px solid black;
+    font-size : calc(var(--default-font-size) - .15rem);
+}
+
+.field input:focus,
+.field textarea:focus {
+    border : 1px solid var(--clr-primary);
+}
+
+.fourth-content .fourth-content-right button{
+    /* min-width: 6rem; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .fourth-content .fourth-content-right form{
     width: 100%;
     border: none;
     padding: 2rem;
@@ -302,37 +354,46 @@ a{
     width: 20%;
     display: flex;
     justify-content: center;
-}
+} */
 
-.fourth-content .fourth-content-right .media-social{
+.media-social-container{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-top : 1.2rem;
 }
 
-.fourth-content .fourth-content-right .media-social a{
-    width: 20px;
-    height: 20px;
-    border: solid;
+.sosmed-container {
+    display : flex;
+    width : 16%;
+    justify-content : space-around;
 }
 
+.sosmed-logo{
+    width : 80%;
+}
 
-/* Footer */
+.instagram-logo{
+    width : 100%;
+}
 
-footer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color:var(--clr-primary);
-    padding: 1%;
-    color: white;
-    font-size: var(--default-font-size);
+.sosmed-container div{
+    width : 2.5rem;
+    height : 2.5rem;
+    background-color : white;
+    border-radius : 50%;
+    padding : .5rem;
+    border : 1px solid var(--clr-primary);
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    cursor : pointer;
 }
 
 
 /* Mobile */
-@media (max-width:414px){
+@media screen and (max-width:700px){
     /* first content mobile */
 
     .content-container-1{
