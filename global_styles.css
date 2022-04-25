@@ -15,8 +15,9 @@
     /* font & text */
     --font-family : "Montserrat", sans-serif;
     --default-font-size : .9rem;
-    --header-1-font-size : 2.8rem;
-    --header-2-font-size : 2rem;
+    --hero-font-size : 3.8rem;
+    --header-1-font-size : 3rem;
+    --header-2-font-size : 1.8rem;
     --header-3-font-size : 1.5rem;
     --footer-font-size : .8rem;
     --line-spacing : 1.6;
@@ -32,12 +33,13 @@
     --clr-neutral : rgba(36, 115, 181,6%);
 
     /* buttons */
-    --clr-btn-primary : linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+    /* --clr-btn-primary : linear-gradient(to right, var(--clr-primary), var(--clr-secondary)); */
+    --clr-btn-primary : var(--clr-secondary);
     --btn-radius : .5rem;
-    --btn-box-shadow : 0 3px 4px rgba(57, 167, 174, .3);
+    --btn-box-shadow : 2px 2px 3px rgba(57, 167, 174, .5);
 
     /* events */
-    --clr-events : linear-gradient(to bottom, #0B2236, #1A4C76, #2473B5);
+    --clr-events : linear-gradient(to bottom, #19517f,#071724);
     --events-box-shadow : 6px 5px 6px rgb(0, 0, 0, 25%);
 
     /* community */
@@ -86,31 +88,34 @@ button:hover{
     border: none;
     font-family : var(--font-family);
     font-size: calc(var(--default-font-size) - .15rem);
-    border-radius: var(--btn-radius);
+    /* border-radius: var(--btn-radius); */
     padding: .5rem 1rem;
+    font-weight : 600;
 }
 
 .primary-btn{
-    background-image: var(--clr-btn-primary);
+    background-color: var(--clr-btn-primary);
     color: white;
     box-shadow : var(--btn-box-shadow);
     transition: 0.3s;
 }
 .primary-btn:hover{
-    filter : brightness(70%);
+    background-color : #2e868b;
 }
+
 
 .secondary-btn{
     background : none;
     color: var(--clr-secondary);
     border : 1px solid var(--clr-secondary);
-    transition: 0.3s;
-    
+    transition: ease-out 0.2s;
 }
 .secondary-btn:hover{
-    background-image: var(--clr-btn-primary);
-    color: white;
-    filter : brightness(70%);
+    box-shadow : inset 70px 0 0 0 var(--clr-secondary);
+    color : white;
+}
+.secondary-btn:active {
+    box-shadow : inset 70px 0 0 0 #1d5457;
 }
 
 .tertiary-btn{
@@ -194,11 +199,12 @@ button:hover{
     display: flex;
     align-self : flex-end;
     align-items : center;
-    justify-content: space-around;
+    justify-content: center;
+    /* background-color: pink; */
 }
 
-.header-list-down-right .primary-btn{
-    margin-right : 3px;
+.header-list-down-right .btn{
+    margin-right : 15px;
 }
 
 .header-navbar-menu{
@@ -281,7 +287,6 @@ footer div{
         right: 0;
         width: 50vw;
         height: 30vh;
-        background-color: white;
     }
 
     .header-list-down-middle{
