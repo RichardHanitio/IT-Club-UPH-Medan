@@ -74,8 +74,6 @@
 
     <!-- Poster -->
     <main class="event-main">
-
-
         <?php while ($event = mysqli_fetch_array($result)) :?>
             <?php
             echo '
@@ -85,10 +83,7 @@
                 <p class="organizer">'.$event[2].'</p>
             </a>'
             ?>
-        <?php endwhile; ?>
-        
-
-        
+        <?php endwhile; ?> 
     </main>
 
 
