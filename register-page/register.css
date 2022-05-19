@@ -2,6 +2,8 @@
 
 .outer-container{
     background : url(/images/itclub1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height : 100vh;
     width : 100vw;
     position : relative;
@@ -64,6 +66,18 @@
     align-self: flex-end;
 }
 
+#registerForm{
+    display: flex;
+    
+}
+
+#page1{
+    display: flex;
+}
+
+#page2{
+    display: flex;
+}
 
 @media screen and (max-width: 415px){
     .inner-container{
