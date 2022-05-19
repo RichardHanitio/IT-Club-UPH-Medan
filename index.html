@@ -50,9 +50,11 @@
                     <img src="/images/coding.png" alt="">
                 </div>
                 <div class="first-content-right">
-                    <h1>Welcome</h1>
-                    <h1>To IT Club</h1>
-                    <h1>Website</h1>
+                    <div class="hero-title">
+                        <h1>Welcome</h1>
+                        <h1>To IT Club</h1>
+                        <h1>Website</h1>
+                    </div>
     
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
     
@@ -78,33 +80,19 @@
                         <div class="poster-title">Basic Coding Class 1</div>
                     </a>
 
-                    <a class="event show" href="" id="event-2">
+                    <!-- <a class="event" href="" id="event-2">
                         <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 2</div>
                     </a>
 
-                    <a class="event show" href="" id="event-3">
+                    <a class="event" href="" id="event-3">
                         <div class="poster-image">
                             <img src="/images/BCC_Poster2-02.png" alt="">
                         </div>
                         <div class="poster-title">Basic Coding Class 3</div>
-                    </a>
-
-                    <a class="event" href="" id="event-4">
-                        <div class="poster-image">
-                            <img src="/images/BCC_Poster2-02.png" alt="">
-                        </div>
-                        <div class="poster-title">Basic Coding Class 4</div>
-                    </a>
-
-                    <a class="event" href="" id="event-5">
-                        <div class="poster-image">
-                            <img src="/images/BCC_Poster2-02.png" alt="">
-                        </div>
-                        <div class="poster-title">Basic Coding Class 5</div>
-                    </a>
+                    </a> -->
 
                     <i class="fa-solid fa-chevron-right events-icon arrow" id="next-slide"></i>
                 </div>
@@ -116,10 +104,12 @@
         <section class="third-section">
             <div class="third-container">
                 <div class="third-content-left">
-                    <h1>Hi,</h1>
-                    <h1>Welcome to our</h1>
-                    <h1>Community!</h1>
-    
+                    <div class="third-content-left-title">
+                        <h1>Hi,</h1>
+                        <h1>Welcome to our</h1>
+                        <h1>Community!</h1>
+                    </div>
+
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
 
                     <button onclick="" class="btn secondary-btn learn-more-btn">Learn More About Us</button>
@@ -197,9 +187,15 @@
     <script>
         const headerContainer = document.querySelector(".header-list-down-container");
         const hamburgerIcon = document.querySelector(".header-hamburger-icon svg")
-        
+        const allLists = [...document.querySelectorAll(".header-navbar-menu")];
+
         hamburgerIcon.addEventListener("click", () => {
             headerContainer.classList.toggle("header-active")
+            allLists.forEach(
+                list => {
+                    list.style.animation = "fade-in-anim .8s";
+                }
+            )
         });
 
 

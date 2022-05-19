@@ -197,8 +197,6 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(0%);
-    transition: 0.8s ease-in-out;
     height : 100%;
 }
 .header-list-down-middle{
@@ -263,49 +261,64 @@ footer div{
     footer div {
         font-size : var(--footer-font-size);
     }
-
     body {
         overflow-x : hidden;
     }
-
+    .header-nav {
+        width : 100vw;
+        position : fixed;
+    }
     .header-hamburger-icon {
         display : block;
-        width : 95%;
-        display : flex;
-        justify-content : flex-end;
-    }
-
-    .header-hamburger-icon svg{
+        margin-right : 20px;
         cursor : pointer;
     }
-
     .header-list-down-container {
-        background-color : white;
-        display : flex;
-        flex-direction : column;
         position : absolute;
-        right : 0;  
+        flex-direction : column;
+        background-color : white;
         top : 4rem;
-        height : calc(100vh - 4rem);
-        width : 60%;
+        height : 100vh;
+        width : 80%;
         transform : translateX(100%);
-        transition : transform ease-in .3s;
+        transition : all .5s ease-in-out;
+        opacity : 0;
     }
-    
     .header-list-down-middle {
         flex-basis : 50%;
         flex-direction : column;
         justify-content : space-around;
     }
-
+    .header-navbar-menu{
+        animation : fade-in-anim .8s;
+    }
     .header-list-down-right {
         width : 100%;
-        justify-content : center;
+        justify-content: center;
+    }
+    .header-right {
+        justify-content : flex-end;
+        position : relative;
+    }
+
+    footer div{
+        font-size : 10px;
     }
 }
 
 .header-active {
+    opacity : 1;
     transform : translateX(0);
 }
 
+@keyframes fade-in-anim {
+    0% {
+        transform : translateY(-100%);
+        opacity : 0;
+    }
+    100% {
+        transform : translateY(0);
+        opacity : 1;
+    }
+}
 
