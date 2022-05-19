@@ -19,11 +19,6 @@
         </div>
 
         <div class="header-right">
-            <label>
-                <input type="checkbox" id="check" onclick="isChecked()">
-                <i class="fas fa-bars"></i>
-            </label>
-
             <div class="header-list-down-container" id="list-down">
                 <ul class="header-list-down-middle">
                     <li class="header-navbar-menu active-page">HOME</li>
@@ -35,6 +30,14 @@
                     <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
                     <li><button class="btn secondary-btn">Login</button></li>
                 </ul>
+            </div>
+
+            <div class="header-hamburger-icon">
+                <svg width="30" height="30" fill="none" stroke="#2473b5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.975 5.975h16"></path>
+                    <path d="M3.975 11.975h16"></path>
+                    <path d="M3.975 17.975h16"></path>
+                </svg>
             </div>
         </div>
     </header>
@@ -133,7 +136,7 @@
         <section class="fourth-section">
             <div class="fourth-container">
                 <div class="fourth-content-left">
-                    <img src="/images/itclublogo.png" alt="">
+                    <img src="/images/coding.png" alt="">
                 </div>
 
                 <div class="fourth-content-right">
@@ -192,74 +195,81 @@
     </main>
 
     <script>
+        const headerContainer = document.querySelector(".header-list-down-container");
+        const hamburgerIcon = document.querySelector(".header-hamburger-icon svg")
+        
+        hamburgerIcon.addEventListener("click", () => {
+            headerContainer.classList.toggle("header-active")
+        });
 
-        var headerMobile = document.querySelector('.header-list-down-container')
-        var bar1 = document.getElementById('bar1')
-        var bar2 = document.getElementById('bar2')
-        var bar3 = document.getElementById('bar3')
 
-        function isChecked(){
-            if(document.getElementById("check").checked){
-                headerMobile.style.transform = "translateX(0)"
-                bar1.classList.toggle("anim1");
-                bar2.classList.toggle("anim2");
-                bar3.classList.toggle("anim3");
-            }
-            else{
-                headerMobile.style.transform = "translateX(100%)"
-                bar1.classList.toggle("anim1");
-                bar2.classList.toggle("anim2");
-                bar3.classList.toggle("anim3");
-            }
-        }
+        // var headerMobile = document.querySelector('.header-list-down-container')
+        // var bar1 = document.getElementById('bar1')
+        // var bar2 = document.getElementById('bar2')
+        // var bar3 = document.getElementById('bar3')
+
+        // function isChecked(){
+        //     if(document.getElementById("check").checked){
+        //         headerMobile.style.transform = "translateX(0)"
+        //         bar1.classList.toggle("anim1");
+        //         bar2.classList.toggle("anim2");
+        //         bar3.classList.toggle("anim3");
+        //     }
+        //     else{
+        //         headerMobile.style.transform = "translateX(100%)"
+        //         bar1.classList.toggle("anim1");
+        //         bar2.classList.toggle("anim2");
+        //         bar3.classList.toggle("anim3");
+        //     }
+        // }
 
         // Slide Javascript
-        var slidePos = 2;
-        var slides = document.getElementsByClassName('event');
-        var totalSlides = slides.length;
-        var slideArr = []
+        // var slidePos = 2;
+        // var slides = document.getElementsByClassName('event');
+        // var totalSlides = slides.length;
+        // var slideArr = []
 
-        document.getElementById('prev-slide').addEventListener("click", function(){
-            console.log("Move left")
-            moveToPrevSlide();
-        })
+        // document.getElementById('prev-slide').addEventListener("click", function(){
+        //     console.log("Move left")
+        //     moveToPrevSlide();
+        // })
 
-        document.getElementById('next-slide').addEventListener("click", function(){
-            console.log("Move Right")
-            moveToNextSlide();
-        })
+        // document.getElementById('next-slide').addEventListener("click", function(){
+        //     console.log("Move Right")
+        //     moveToNextSlide();
+        // })
 
-        function moveToNextSlide(){
-            if(slidePos == slides.length-1){
-                count =0;
-                slidePos = 2;
+        // function moveToNextSlide(){
+        //     if(slidePos == slides.length-1){
+        //         count =0;
+        //         slidePos = 2;
 
-                for(sld of slides){
-                    var removeSlide = slides[count +2];
-                    var newSlide = slides[count];
-                    removeSlide.classList.remove('show');
-                    newSlide.classList.add('show');
-                    count++;
-                }
+        //         for(sld of slides){
+        //             var removeSlide = slides[count +2];
+        //             var newSlide = slides[count];
+        //             removeSlide.classList.remove('show');
+        //             newSlide.classList.add('show');
+        //             count++;
+        //         }
                 
-            }
+        //     }
             
-            else{
-                for(sld of slides){
-                    console.log("aa" + slidePos)
+        //     else{
+        //         for(sld of slides){
+        //             console.log("aa" + slidePos)
 
-                    var removeSlide = slides[slidePos-2];
-                    var newSlide = slides[slidePos+1];
-                    removeSlide.classList.remove('show');
-                    newSlide.classList.add('show');
-                }
-                slidePos++;
-            }
-        }
+        //             var removeSlide = slides[slidePos-2];
+        //             var newSlide = slides[slidePos+1];
+        //             removeSlide.classList.remove('show');
+        //             newSlide.classList.add('show');
+        //         }
+        //         slidePos++;
+        //     }
+        // }
 
-        function moveToPrevSlide(){
+        // function moveToPrevSlide(){
            
-        }
+        // }
 
 
 
