@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: azure;
+}
+
+table{
+    margin: 0 3rem;
+    border: solid ;
+}
+
+th{
+    height: 1.5rem;
+    width: 5%;
+}
+
+.event-form{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 3rem;
+    border: solid 1px;
+    padding: 2rem;
+    background-color: rgb(199, 243, 243);
+}
+
+.button-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.event-container-form{
+    display: flex;
+    width: 100%;
+}
+
+input{
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+h1{
+    text-align: center;
+    margin: 2rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+}

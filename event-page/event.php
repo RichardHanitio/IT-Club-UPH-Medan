@@ -1,3 +1,9 @@
+<?php 
+    $conn = mysqli_connect("localhost", "root", "", "itclub");
+
+    $result = mysqli_query($conn, "SELECT * FROM eventlist");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +58,6 @@
             <select name="sort-box" id="sort-box">
                 <option value="">Newest event</option>
                 <option value="">Oldest event</option>
-
             </select>
         </div>
 
@@ -69,41 +74,19 @@
 
     <!-- Poster -->
     <main class="event-main">
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
 
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
 
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
-
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
-
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
-
-        <a href="" class="event-poster">
-            <img src="/images/BCC_Poster2-02.png" alt="">
-            <h3 class="title">Basic Coding Class 2021</h3>
-            <p class="organizer">IT Club</p>
-        </a>
+        <?php while ($event = mysqli_fetch_array($result)) :?>
+            <?php
+            echo '
+            <a href="" class="event-poster">
+                <img src="/images/'.$event[3].'" alt="">
+                <h3 class="title">'.$event[1].'</h3>
+                <p class="organizer">'.$event[2].'</p>
+            </a>'
+            ?>
+        <?php endwhile; ?>
+        
 
         
     </main>

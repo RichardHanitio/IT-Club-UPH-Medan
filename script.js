@@ -15,4 +15,8 @@ function isChecked() {
         bar2.classList.toggle("anim2");
         bar3.classList.toggle("anim3");
     }
+
+    
+ 
+    
 }
