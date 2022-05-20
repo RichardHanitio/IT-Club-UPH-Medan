@@ -6,27 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="../images/logo-without-name.png">
-    <script src="https://kit.fontawesome.com/307dd45887.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>IT Club</title>
 </head>
 <body>
     <!-- header -->
-    <header class="header-nav">
-        <div class="header-left">
+    <header class="header">
+        <div class="header-image">
             <a href="/index.html">
-                <img src="/images/itclublogo.png" alt="IT Club" class="fit">
+                <img src="/images/itclublogo.png" alt="IT Club">
             </a>
         </div>
 
-        <div class="header-right">
-            <div class="header-list-down-container" id="list-down">
-                <ul class="header-list-down-middle">
-                    <li class="header-navbar-menu active-page">HOME</li>
-                    <li class="header-navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-                    <li class="header-navbar-menu"><a href="/about-page/about.html">ABOUT US</a></li>
+        <div class="header-navbar">
+            <div class="header-navbar-container">
+                <ul class="header-navbar-lists">
+                    <li class="header-navbar-list active-page">HOME</li>
+                    <li class="header-navbar-list"><a href="../event-page/event.html">EVENT</a></li>
+                    <li class="header-navbar-list"><a href="/about-page/about.html">ABOUT US</a></li>
                 </ul>
         
-                <ul class="header-list-down-right">
+                <ul class="header-navbar-buttons">
                     <li><button class="btn primary-btn" onclick="location.href='/register-page/register.php'">Register</button></li>
                     <li><button class="btn secondary-btn">Login</button></li>
                 </ul>
@@ -42,105 +45,128 @@
         </div>
     </header>
 
+
+    <!-- main -->
     <main>
-        <!-- first-section -->
-        <section class="first-section">
-            <div class="first-container">
-                <div class="first-content-left">
+        <!-- welcome section -->
+        <section class="welcome-section">
+            <div class="welcome-container">
+                <div class="welcome-image">
                     <img src="/images/coding.png" alt="">
                 </div>
-                <div class="first-content-right">
-                    <div class="hero-title">
+                <div class="welcome-caption">
+                    <div class="welcome-title">
                         <h1>Welcome</h1>
                         <h1>To IT Club</h1>
                         <h1>Website</h1>
                     </div>
     
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
+                    <p class="welcome-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
     
                     <button onclick="" class="btn primary-btn">Check Out Our Event</button>
                 </div>
             </div>
         </section>  
         
-        <!-- second-section -->
-        <section class="second-section">
-            <div class="second-container">
-                <h2 class="title">
+        <!-- events section -->
+        <section class="events-section">
+            <div class="events-container">
+                <h2 class="events-title">
                     Events
                 </h2>
 
-                <div class="event-container">
-                    <i class="fa-solid fa-chevron-left events-icon arrow" id="prev-slide"></i>
+                <div class="events-container swiper mySwiper">
+                    <div class="events-inner-container swiper-wrapper">
+                        <a class="event-container swiper-slide" href="" id="event-1">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 1</div>
+                        </a>
 
-                    <a class="event show" href="" id="event-1">
-                        <div class="poster-image">
-                            <img src="/images/BCC_Poster2-02.png" alt="">
-                        </div>
-                        <div class="poster-title">Basic Coding Class 1</div>
-                    </a>
+                        <a class="event-container swiper-slide" href="" id="event-2">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 2</div>
+                        </a>
 
-                    <!-- <a class="event" href="" id="event-2">
-                        <div class="poster-image">
-                            <img src="/images/BCC_Poster2-02.png" alt="">
-                        </div>
-                        <div class="poster-title">Basic Coding Class 2</div>
-                    </a>
+                        <a class="event-container swiper-slide" href="" id="event-3">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 3</div>
+                        </a>
+                        <a class="event-container swiper-slide" href="" id="event-1">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 4</div>
+                        </a>
 
-                    <a class="event" href="" id="event-3">
-                        <div class="poster-image">
-                            <img src="/images/BCC_Poster2-02.png" alt="">
-                        </div>
-                        <div class="poster-title">Basic Coding Class 3</div>
-                    </a> -->
+                        <a class="event-container swiper-slide" href="" id="event-2">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 5</div>
+                        </a>
 
-                    <i class="fa-solid fa-chevron-right events-icon arrow" id="next-slide"></i>
+                        <a class="event-container swiper-slide" href="" id="event-3">
+                            <div class="event-image">
+                                <img src="/images/BCC_Poster2-02.png" alt="">
+                            </div>
+                            <div class="event-title">Basic Coding Class 6</div>
+                        </a>
+                    </div>
+                    <div class="event-button swiper-button swiper-button-next"></div>
+                    <div class="event-button swiper-button swiper-button-prev"></div>
+                    <div class="event-pagination swiper-pagination"></div>
                 </div>
             </div>
         </section>
 
 
-        <!-- third section -->
-        <section class="third-section">
-            <div class="third-container">
-                <div class="third-content-left">
-                    <div class="third-content-left-title">
+        <!-- community section -->
+        <section class="community-section">
+            <div class="community-container">
+                <div class="community-caption">
+                    <div class="community-title">
                         <h1>Hi,</h1>
                         <h1>Welcome to our</h1>
                         <h1>Community!</h1>
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
+                    <p class="community-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet id laudantium architecto quo? Voluptatibus officiis recusandae ex atque dolorem eligendi possimus accusantium itaque cumque nesciunt. Facilis, magni? Ipsum, laboriosam.</p>
 
                     <button onclick="" class="btn secondary-btn learn-more-btn">Learn More About Us</button>
                 </div>
 
-                <div class="third-content-right">
+                <div class="community-image">
                     <img src="/images/Community.png" alt="">
                 </div>
             </div>
         </section>
 
 
-        <!-- fourth section -->
-        <section class="fourth-section">
-            <div class="fourth-container">
-                <div class="fourth-content-left">
+        <!-- contact section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-image">
                     <img src="/images/coding.png" alt="">
                 </div>
 
-                <div class="fourth-content-right">
+                <div class="contact-caption">
                     <div class="contact-title-desc">
-                        <h2 class="title">
+                        <h2 class="contact-title">
                             Contact Us
                         </h2>
-                        <p>
+                        <p class="contact-desc">
                             Have any questions or feedback? We'd like to hear from you
                         </p>
                     </div>
 
-                    <div class="form-container">
-                        <form action="" class="contact-us-form">
+                    <div class="contact-form-container">
+                        <form action="" class="contact-form">
                             <label class="field">
                                 <div>Full Name</div>
                                 <input type="text" name="full-name" placeholder="Enter Your Full Name">
@@ -160,15 +186,15 @@
                         </form>
                     </div>
 
-                    <div class="media-social-container">
+                    <div class="contact-media-container">
                         <p>Or contact us via</p>
 
-                        <div class="sosmed-container">
-                            <div>
-                                <img src="/images/instagram-logo.png" alt="" class="sosmed-logo instagram-logo">
+                        <div class="contact-media">
+                            <div class="media-logo instagram-logo">
+                                <img src="/images/instagram-logo.png" alt="">
                             </div>
-                            <div>
-                                <img src="/images/gmail-logo.png" alt="" class="sosmed-logo gmail-logo">
+                            <div class="media-logo gmail-logo">
+                                <img src="/images/gmail-logo.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -184,114 +210,7 @@
         </footer>
     </main>
 
-    <script>
-        const headerContainer = document.querySelector(".header-list-down-container");
-        const hamburgerIcon = document.querySelector(".header-hamburger-icon svg")
-        // const allLists = [...document.querySelectorAll(".header-navbar-menu")];
-        const header = document.querySelector(".header-nav");
+    <script src="./script.js"></script>
 
-        // click hamburger icon
-        hamburgerIcon.addEventListener("click", () => {
-            headerContainer.classList.toggle("header-active")
-            // allLists.forEach(
-            //     list => {
-            //         list.style.animation = "fade-in-anim .8s";
-            //     }
-            // )
-        });
-
-        // scroll down header
-        window.addEventListener("scroll", () => {
-            const scrolled = window.scrollY;
-            if(screen.width > 700){
-                if(scrolled>=200) {
-                    header.style.cssText = `
-                        height : 4rem;
-                        opacity : 0.6;
-                        transition : all 0.3s;
-                        box-shadow: 0 5px 10px 0 rgba(0,0,0,.5);
-                    `
-                } else {
-                    header.style.cssText = `
-                        height : 5rem;
-                        opacity : 1;
-                        transition : all 0.3s;
-                    `
-                }
-            }
-        })
-
-
-        // var headerMobile = document.querySelector('.header-list-down-container')
-        // var bar1 = document.getElementById('bar1')
-        // var bar2 = document.getElementById('bar2')
-        // var bar3 = document.getElementById('bar3')
-
-        // function isChecked(){
-        //     if(document.getElementById("check").checked){
-        //         headerMobile.style.transform = "translateX(0)"
-        //         bar1.classList.toggle("anim1");
-        //         bar2.classList.toggle("anim2");
-        //         bar3.classList.toggle("anim3");
-        //     }
-        //     else{
-        //         headerMobile.style.transform = "translateX(100%)"
-        //         bar1.classList.toggle("anim1");
-        //         bar2.classList.toggle("anim2");
-        //         bar3.classList.toggle("anim3");
-        //     }
-        // }
-
-        // Slide Javascript
-        // var slidePos = 2;
-        // var slides = document.getElementsByClassName('event');
-        // var totalSlides = slides.length;
-        // var slideArr = []
-
-        // document.getElementById('prev-slide').addEventListener("click", function(){
-        //     console.log("Move left")
-        //     moveToPrevSlide();
-        // })
-
-        // document.getElementById('next-slide').addEventListener("click", function(){
-        //     console.log("Move Right")
-        //     moveToNextSlide();
-        // })
-
-        // function moveToNextSlide(){
-        //     if(slidePos == slides.length-1){
-        //         count =0;
-        //         slidePos = 2;
-
-        //         for(sld of slides){
-        //             var removeSlide = slides[count +2];
-        //             var newSlide = slides[count];
-        //             removeSlide.classList.remove('show');
-        //             newSlide.classList.add('show');
-        //             count++;
-        //         }
-                
-        //     }
-            
-        //     else{
-        //         for(sld of slides){
-        //             console.log("aa" + slidePos)
-
-        //             var removeSlide = slides[slidePos-2];
-        //             var newSlide = slides[slidePos+1];
-        //             removeSlide.classList.remove('show');
-        //             newSlide.classList.add('show');
-        //         }
-        //         slidePos++;
-        //     }
-        // }
-
-        // function moveToPrevSlide(){
-           
-        // }
-
-
-
-    </script>
 </body>
 </html>
