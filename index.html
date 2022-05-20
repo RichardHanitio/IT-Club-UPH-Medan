@@ -187,16 +187,39 @@
     <script>
         const headerContainer = document.querySelector(".header-list-down-container");
         const hamburgerIcon = document.querySelector(".header-hamburger-icon svg")
-        const allLists = [...document.querySelectorAll(".header-navbar-menu")];
+        // const allLists = [...document.querySelectorAll(".header-navbar-menu")];
+        const header = document.querySelector(".header-nav");
 
+        // click hamburger icon
         hamburgerIcon.addEventListener("click", () => {
             headerContainer.classList.toggle("header-active")
-            allLists.forEach(
-                list => {
-                    list.style.animation = "fade-in-anim .8s";
-                }
-            )
+            // allLists.forEach(
+            //     list => {
+            //         list.style.animation = "fade-in-anim .8s";
+            //     }
+            // )
         });
+
+        // scroll down header
+        window.addEventListener("scroll", () => {
+            const scrolled = window.scrollY;
+            if(screen.width > 700){
+                if(scrolled>=200) {
+                    header.style.cssText = `
+                        height : 4rem;
+                        opacity : 0.6;
+                        transition : all 0.3s;
+                        box-shadow: 0 5px 10px 0 rgba(0,0,0,.5);
+                    `
+                } else {
+                    header.style.cssText = `
+                        height : 5rem;
+                        opacity : 1;
+                        transition : all 0.3s;
+                    `
+                }
+            }
+        })
 
 
         // var headerMobile = document.querySelector('.header-list-down-container')

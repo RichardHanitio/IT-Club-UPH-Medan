@@ -17,22 +17,25 @@
         </div>
 
         <div class="header-right">
-            <label>
-                <input type="checkbox" id="check" onclick="isChecked()">
-                <i class="fas fa-bars"></i>
-            </label>
-
             <div class="header-list-down-container" id="list-down">
                 <ul class="header-list-down-middle">
-                    <li class="header-navbar-menu"><a href="/index.html">HOME</a></li>
+                    <li class="header-navbar-menu active-page">HOME</li>
                     <li class="header-navbar-menu"><a href="../event-page/event.html">EVENT</a></li>
-                    <li class="header-navbar-menu active-page">ABOUT US</li>
+                    <li class="header-navbar-menu"><a href="/about-page/about.html">ABOUT US</a></li>
                 </ul>
         
                 <ul class="header-list-down-right">
-                    <li><button class="btn primary-btn" onclick="location.href='/register-page/register.html'">Register</button></li>
-                    <li><button class="btn secondary-btn">Log in</button></li>
+                    <li><button class="btn primary-btn" onclick="location.href='/register-page/register.php'">Register</button></li>
+                    <li><button class="btn secondary-btn">Login</button></li>
                 </ul>
+            </div>
+
+            <div class="header-hamburger-icon">
+                <svg width="30" height="30" fill="none" stroke="#2473b5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.975 5.975h16"></path>
+                    <path d="M3.975 11.975h16"></path>
+                    <path d="M3.975 17.975h16"></path>
+                </svg>
             </div>
         </div>
     </header>
