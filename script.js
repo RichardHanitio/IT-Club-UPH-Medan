@@ -9,21 +9,28 @@ const headerNavbarList = [
 ];
 
 // init swiper
-if (screen.width <= 700) {
-    let swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
+let swiper;
+if(screen.width > 800){
+    swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
         spaceBetween: 30,
-        centeredSlides: true,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 } else {
-    let swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+    swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
         spaceBetween: 30,
-        slidesPerGroup: 3,
+        slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
